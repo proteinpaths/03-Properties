@@ -1,0 +1,8 @@
+BEFORE INSTALL:
+	- Change in the Makefiles for g++-4.8 version
+	- It uses the g++-4.8 compiler, install in your system
+
+AFTER-INSTALL:
+	- Export the environment var PROFLEX_HOME to "prog" dir of proflex dir
+	  For example:
+	  export export PROFLEX_HOME=/home/ppath/03-Properties/dev/src/proflex/proflex/prog

@@ -1,0 +1,3456 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\begin_preamble
+\usepackage{/lgstyle}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics none
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -1666014648 "Luis Garreta"
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Software Toolkit para análisis de trayectorias de plegamiento de proteínas
+\end_layout
+
+\begin_layout Standard
+Este capítulo describe un toolkit que fue desarrollado para evaluar 16 propiedad
+es estructurales y energéticas de proteínas seleccionadas de la literatura
+ y otras de desarrollo propio.
+ Las propiedades serán usadas en los próximos capítulos para lograr una
+ representación de una proteína en términos de 
+\emph on
+características de plegamiento
+\emph default
+.
+ Empezamos con la presentación de una descripción de las propiedades mostrando
+ su definición y su importancia asociada con características de pleglamiento;
+ y luego presentamos el toolkit que desarrollamos con los algoritmos y herramien
+tas usadas para calcular sus valores.
+\end_layout
+
+\begin_layout Section
+Propiedades de proteínas
+\end_layout
+
+\begin_layout Standard
+Las propiedades descritas en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tabProp"
+
+\end_inset
+
+ han sido usadas en otros estudios para caracterizar diferentes aspectos
+ del proceso de plegamiento de proteínas, y han sido asociadas con algunas
+ características de plegamiento no observables directamente a partir de
+ la estructura de la proteína.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement !htpb
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionLG
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Resumen de las propiedades seleccionadas para describir el plegamiento
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+La tabla muestra el nombre de las propiedad, el id que será usado como nombre
+ corto a lo largo de este documento, una descripción corta y su asociación
+ con el plegamiento de proteínas.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tabProp"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabcolsep=3pt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size footnotesize
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="4">
+<features tabularvalignment="middle">
+<column alignment="none" valignment="top" width="2.5cm">
+<column alignment="none" valignment="top" width="0.5cm">
+<column alignment="none" valignment="top" width="5.7cm">
+<column alignment="none" valignment="top" width="3.2cm">
+<row>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Name
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Id
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Description
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Association
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Contactos Nativos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Contactos formados por una conformación de proteína que también están presentes
+ en la estructura nativa.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Grado de cercanía con la estructura nativa.
+ Cantidad de estructura nativa.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Orden de Contactos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+CO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Separación promedio de secuencias entre residuos en contacto en la estrucutra
+ nativa.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Propiedades cinéticas del plegamiento de proteínas.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Radio de Giración 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+RG 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Cuánto se esparce la proteína de su centro.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Nivel de compactación de la estructura.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Enlaces de Hidrógeno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+HB 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Número de enlaces de hidrógeno formados por la estructura.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Formación y estabilización.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Área de Superficie Accesible.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+AS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Superficie accesible para el solvente.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Compactación y estabilidad conformacional.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Vacíos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+VD 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Espacios sin llenar dentro de una proteína que no son accesibles desde el
+ solvente.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Empaquetado y estabilidad de la proteína.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+RMSD 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+RM 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Distancia promedio en posiciones entre los atomos de dos proteínas.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Similitud de las proteínas.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+RMSD Local
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+LR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Promedio del RMSD entre los elementos de la estructura secundaria (desarrollado
+ por Garreta).
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Topología de la proteína y similitud estructural.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Energía Potencial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Energía asociada con las fuerzas de atracción y repulsión entre los átomos
+ de la proteína.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Estabilidad termodinámica.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Momento Dipolar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+El producto de la magnitud de las cargas y su distancia de separación en
+ una proteína.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Forma de la proteína- Propiedades eléctricas.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Residuos en Estructuras Secundarias Correctas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+RC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Residuos formando la misma estructura secundaria que la conformación nativa
+ (desarrollado por Garreta).
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Similitud de estructuras entre proteínas.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Residuos en cualquier estructura secundaria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+RA 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Residuos en la proteína objetivo formando cualquier elemento de estructura
+ secundaria (desarrollado por Garreta).
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Similitud de estructuras entre proteínas.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Puntaje Estructural
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+SS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Residuos que forman 
+\begin_inset Quotes eld
+\end_inset
+
+correctamente
+\begin_inset Quotes erd
+\end_inset
+
+ motivos locales cortos o bloques de proteínas (desarrollado por Garreta).
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Similitud de estructuras entre proteínas.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Clusters Rígidos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+CL 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Grupos de átomos acoplados uno al otro a través de enlaces rígidos.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Estabilidad mecánica de una proteína.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Grados de libertad 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+DF 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Relacionada con el numero de restricciones necesarias para ha..Related with
+ the number of constraints necessary hacer rígida la estructura de la proteína.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Estabilidad mecánica de una proteína.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Regiones estresadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+SR 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Regiones con sobrecarca de restricciones que reducen el grado de libertat
+ de una proteína.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Estabilidad mecánica de una proteína.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Contactos Nativos
+\end_layout
+
+\begin_layout Standard
+El número de contactos nativos de una conformación proteica puede ser considerad
+o como una medida global de la "cantidad" de estructura que contiene respecto
+ a su estructura nativa.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AmatoSong04"
+literal "true"
+
+\end_inset
+
+.
+ ...Dos residuos de proteína distintos forman un contacto cuando la distancia
+ máxima entre residuos de un par de átomos pesados (C, O, S, or N) está
+ dentro de un valor umbral (ej.
+ 6 o 7 
+\begin_inset Formula $\textrm{Å}$
+\end_inset
+
+).
+ Otras restricciones pueden ser una distancia euclidiana mínima entre los
+ residuos (e.g.
+ 3 
+\begin_inset Formula $\textrm{Å}$
+\end_inset
+
+); una separación secuencial de al menos 3 residuos entre sí; o una distancia
+ entre átomos pesados específicos como C-
+\begin_inset Formula $\alpha$
+\end_inset
+
+ or C-
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El número de contactos nativos se ha utilizado para evaluar la "semejanza
+ nativa" de las conformaciones (cuánta estructura tiene una conformación)
+ en varios estudios relacionados con el plegamiento de proteínas como la
+ construcción de rutas utilizando métodos probabilísticos de hoja de ruta.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AmatoSong01, LatombeApaydin03"
+literal "true"
+
+\end_inset
+
+; el estudio de las primeras fases del plegado mediante simulaciones de
+ dinámica molecular 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DuanKollman98"
+literal "true"
+
+\end_inset
+
+; y en la construcción del camino usando eventos de desplegado 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BystroffZaki04"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se calcula contando los contactos de la conformación que también están en
+ la estructura nativa.
+ Como se ha definido anteriormente, dos átomos de dos aminoácidos diferentes
+ 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+ están en contacto, si su distancia entre residuos 
+\begin_inset Formula $\delta(a_{i},b_{j})\leq\delta^{max}$
+\end_inset
+
+, donde 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\delta(a_{i},b_{j})=\sqrt{(x_{i}-x_{j})^{2}+y_{i}-y_{j})^{2}+(z_{i}-z_{j})^{2}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+es la distancia euclidiana entre dos átomos(ej.
+ carbono C-
+\begin_inset Formula $\alpha$
+\end_inset
+
+ o C-
+\begin_inset Formula $\beta$
+\end_inset
+
+) de los dos residuos diferentes con coordenadas 3D 
+\begin_inset Formula $x_{i},y_{i},z_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{j},y_{j},z_{j}$
+\end_inset
+
+; y 
+\begin_inset Formula $\delta^{max}$
+\end_inset
+
+ es algún umbral de distancia máxima permitida (ej.
+ 6 o 7 
+\begin_inset Formula $\textrm{Å}$
+\end_inset
+
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BystroffZaki04"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Orden de Contacto
+\end_layout
+
+\begin_layout Standard
+La complejidad topológica de una proteína está relacionada con el tipo de
+ interacciones, locales o no locales, que impulsan su plegamiento.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PlaxcoBaker98"
+literal "true"
+
+\end_inset
+
+.
+ El orden de contacto (CO) se define como una medida del número relativo
+ de interacciones locales en comparación con las interacciones no locales
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jackson98"
+literal "true"
+
+\end_inset
+
+.
+ Las estructuras dominadas por interacciones locales como las proteínas
+ altamente 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ helicoidales corresponden a bajo CO y se pliegan más rápidamente que las
+ estructuras dominadas por interacciones de largo alcance -necesarias para
+ su estabilidad–como 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ proteínas con CO más alto.
+\end_layout
+
+\begin_layout Standard
+Esta medida ayuda a cuantificar la topología y la estabilidad de las proteínas
+ en sus estados nativos.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ShiLin08"
+literal "true"
+
+\end_inset
+
+.
+ Se ha correlacionado bien con las propiedades de la cinética de plegado
+ de proteínas como las tasas de plegado y la colocación del estado de transición
+ de proteínas.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PlaxcoBaker98"
+literal "true"
+
+\end_inset
+
+.
+ Además, se ha utilizado en programas de estructura de proteínas 
+\emph on
+ab initio
+\emph default
+ para ayudar a seleccionar los mejores candidatos para una etapa de refinamiento
+ posterior.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bonneau02"
+literal "true"
+
+\end_inset
+
+.
+ En proteínas con cinética simple -plegamiento en dos estados- ha descrito
+ el tipo de interacciones proteicas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PlaxcoBaker98, Jackson98"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se calcula a partir de las coordenadas de la estructura de una proteína
+ de la siguiente manera
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PlaxcoBaker98"
+literal "true"
+
+\end_inset
+
+:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $CO=\frac{1}{L\,N}\underset{i,j}{\overset{N}{\sum}}\triangle S_{i,j}\left|i-j\right|$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $L$
+\end_inset
+
+ es el número total de residuos en la proteína, N es el número total de
+ contactos, y 
+\begin_inset Formula $\triangle S_{i,j}$
+\end_inset
+
+ es la separación secuencial de residuos entre 
+\begin_inset Formula $i$
+\end_inset
+
+ y 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Radio de giro
+\end_layout
+
+\begin_layout Standard
+El radio de giro (RG) es una medida de la forma o dimensiones de la conformación
+ de una proteína que describe su tamaño y compacidad midiendo cuánto se
+ extiende la estructura de la proteína desde su centro.
+ En el análisis de proteínas, la RG ayuda a inferir cuán plegada o desplegada
+ está una proteína, ya que es indicativa del nivel de compactación de la
+ estructura
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LobanovGalzitskaya08"
+literal "true"
+
+\end_inset
+
+.
+
+\change_deleted -1666014648 1535903414
+ 
+\change_unchanged
+ Ayuda a trazar los cambios de conformación de una proteína durante su trayector
+ia de plegado trazando su RG en función del tiempo.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KollmanDuan98"
+literal "true"
+
+\end_inset
+
+.
+ Además, se ha demostrado que las arquitecturas de las proteínas (
+\begin_inset Formula $\alpha,\beta,\alpha/\beta,\text{y}\alpha+\beta$
+\end_inset
+
+) tienen un RG característico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LobanovGalzitskaya08"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El radio de giro de una conformación se calcula como la distancia entre
+ su centro de gravedad y sus extremos.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gromacs05"
+literal "true"
+
+\end_inset
+
+: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{g}=\sqrt{\left(\frac{\sum_{i}\left\Vert r_{i}\right\Vert ^{2}m_{i}}{\sum_{i}m_{i}}\right)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $m_{i}$
+\end_inset
+
+ es la masa del átomo 
+\begin_inset Formula $i$
+\end_inset
+
+ y 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ la posición del átomo 
+\begin_inset Formula $i$
+\end_inset
+
+ con respecto al centro de masa de la molécula.
+\end_layout
+
+\begin_layout Subsection
+Enlaces de Hidrógeno
+\end_layout
+
+\begin_layout Standard
+Los enlaces de hidrógeno (HB) juegan un papel central en el plegamiento
+ de proteínas, influyendo en la forma final en 3D de una proteína al contribuir
+ en la formación de sus estructuras secundarias y terciarias.
+ Un enlace de hidrógeno es un tipo de fuerza atractiva que existe entre
+ un hidrógeno unido a un átomo electronegativo de una molécula y un átomo
+ electronegativo de la misma molécula o de una molécula diferente.
+ Los enlaces de hidrógeno participan tanto en la estabilización de hélices
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+como en la interacción entre hebras 
+\begin_inset Formula $\beta$
+\end_inset
+
+ para format hojas 
+\begin_inset Formula $\beta$
+\end_inset
+
+, así que son parcialmente responsables de la estabilidad de la estructura
+ final de la proteína plegada 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Whitford05"
+literal "true"
+
+\end_inset
+
+.
+ Varios estudios han utilizado el HB para evaluar la estabilidad 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FlemingRose06"
+literal "true"
+
+\end_inset
+
+ y para indicar cierta organización en proteínas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GongRose05"
+literal "true"
+
+\end_inset
+
+.
+ Generalmente, este tipo de enlace es más fuerte que otras fuerzas intermolecula
+res como el van der Waals pero más débil que los enlaces iónicos y covalentes.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "StickleRose92"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para determinar el número de enlaces de hidrógeno formados en una estructura
+ proteica, se cuentan los pares de átomos -donantes y aceptantes- que están
+ dentro de un valor umbral.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AmatoSong04"
+literal "true"
+
+\end_inset
+
+.
+ El umbral puede variar de 2.6 a 3.6 
+\begin_inset Formula $\textrm{Å}$
+\end_inset
+
+, que es la distancia entre átomos pesados.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Whitford05"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Área de superficie Accesible
+\end_layout
+
+\begin_layout Standard
+La superficie accesible (ASA) de una proteína contribuye a determinar su
+ tamaño y forma.
+ El ASA es un concepto que corresponde a la superficie de una proteína accesible
+ al solvente.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LeeRichards71"
+literal "true"
+
+\end_inset
+
+.
+ Desempeña un papel importante en varias propiedades de las proteínas como
+ la compacidad, el plegamiento de proteínas y la estabilidad conformacional.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LiangSubramaniam98"
+literal "true"
+
+\end_inset
+
+.
+ El ASA se ha utilizado para caracterizar la compacidad de una estructura
+ proteica definiendo una relación entre su ASA y la superficie de la esfera
+ ideal del mismo volumen.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LobanovGalzitskaya08"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La idea general para calcular el ASA es utilizar una "sonda", correspondiente
+ a una esfera del disolvente, que se hace rodar sobre la superficie de la
+ proteína explorando el área accesible por la sonda.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ShrakeRupley73"
+literal "true"
+
+\end_inset
+
+.
+ El radio de la sonda corresponde al radio de una molécula del disolvente,
+ por ejemplo 1.4 
+\begin_inset Formula $\textrm{Å}$
+\end_inset
+
+ para una molécula de agua.
+\end_layout
+
+\begin_layout Subsection
+Vacíos
+\end_layout
+
+\begin_layout Standard
+Los vacíos son espacios vacíos o cavidades vacías, dentro de una proteína,
+ que no son accesibles al disolvente.
+ Permanecen vacías aunque pueden ser lo suficientemente grandes como para
+ ser llenadas por otros átomos o moléculas como el agua.
+ Se han relacionado con la estabilidad de las proteínas, ya que al rellenar
+ las cavidades -en la ingeniería de proteínas- en algunos tetrámeros se
+ puede estabilizar su estructura en general
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nomura11"
+literal "true"
+
+\end_inset
+
+.
+ Además, los vacíos están relacionados con la evaluación de la calidad de
+ empaquetamiento de las proteínas.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LiangDill01"
+literal "true"
+
+\end_inset
+
+.
+ Menos cavidades de vacíos dentro de una proteína implican que está más
+ empaquetada, y las altas densidades de empaquetado en los núcleos de proteínas
+ a menudo se consideran más como sólidos que como líquidos.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LiangDill01"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los vacíos se calculan utilizando un método de búsqueda de vacíos basado
+ en cuadrículas que mapea una proteína en una cuadrícula 3D y asigna cada
+ punto de cuadrícula a la proteína, al solvente o a la cavidad de acuerdo
+ con su ubicación en la estructura de la proteína.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CuffMartin04"
+literal "true"
+
+\end_inset
+
+.
+ Dos tipos de sondas con un radio pequeño (ej.
+ 0.0 
+\family roman
+Å
+\family default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+?realmente 0.0?
+\end_layout
+
+\end_inset
+
+) y un radio grande (ej.
+ 1.4 
+\family roman
+Å
+\family default
+) se usan para detectar vacíos y delimitar las regiones accesibles con solventes
+, respectivamente.
+ La sonda más grande delimita las regiones accesibles al disolvente, mientras
+ que la más pequeña identifica los vacíos sin fusionarlos con el disolvente
+ en bruto.
+\end_layout
+
+\begin_layout Subsection
+Error cuadrático Medio
+\end_layout
+
+\begin_layout Standard
+El error cuadrático medio(
+\emph on
+Root-Mean Square Deviation
+\emph default
+ en inglés, y más conocido como RMSD)refleja la distancia media en posiciones
+ entre los átomos de dos proteínas superpuestas.
+ Generalmente, estructuras similares tienen valores bajos de RMSD, en el
+ orden de 1-3 
+\begin_inset Formula $\textrm{Å}$
+\end_inset
+
+, mientras que los valores RMSD más grandes corresponden a valores más disímiles
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bergeron02"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El RMSD ha sido ampliamente utilizado como una medida del grado de similitud
+ entre dos estructuras de proteínas.
+ El experimento CASP ha utilizado este método -además de otras medidas-
+ para evaluar los protocolos de predicción utilizados por los expertos para
+ predecir la estructura 3D entre proteínas.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moult06"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se calcula a partir de las coordenadas del objetivo 
+\begin_inset Formula $i$
+\end_inset
+
+ and una referencia 
+\begin_inset Formula $j$
+\end_inset
+
+ como sigue:
+\begin_inset Formula 
+\[
+RMSD(i,j)=\sqrt{\frac{1}{N}\overset{^{N}}{\underset{_{k=1}}{\sum}}\left||r_{k}^{(i)}-r_{k}^{(j)}|\right|^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+donde 
+\begin_inset Formula $i$
+\end_inset
+
+ y 
+\begin_inset Formula $j$
+\end_inset
+
+ son dos estructuras de proteínas óptimamente superpuestas de igual tamaño
+ .
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ es el número de átomos en cada estructura, 
+\begin_inset Formula $k$
+\end_inset
+
+ es un índice sobre estos átomos, y 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $r_{k}^{(i)},r_{k}^{(j)}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\noindent
+no puedo borrar 
+\begin_inset Formula $\left|r_{k}^{(i)}-r_{k}^{(j)}\right|$
+\end_inset
+
+pero es sin absoluto y con coma: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $r_{k}^{(i)},r_{k}^{(j)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+son las coordenadas cartesianas del átomo 
+\begin_inset Formula $k$
+\end_inset
+
+ en conformaciones 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ El valor de RMSD resulta mínimo porque está determinado por la superposición
+ de las estructuras que minimiza su distancia.
+ En nuestro proyecto, el RMSD se utiliza siempre para comparar una determinada
+ conformación proteica con la nativa.
+\end_layout
+
+\begin_layout Subsection
+Error cuadrático Medio Local (Local RMSD)
+\end_layout
+
+\begin_layout Standard
+El citado RMSD es una medida global incapaz de evaluar las similitudes en
+ las estructuras locales, y considerada como una "medida imperfecta" para
+ comparar estructuras como conformaciones intermedias donde los elementos
+ estructurales pueden estar presentes pero no todavía organizados espacialmente.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FlemingRose06, MucherinoColonna08"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En su proyecto, Garreta desarrolló el 
+\emph on
+local root-mean square deviation
+\emph default
+ (LRMSD).
+ Compara una conformación de referencia 
+\begin_inset Formula $i$
+\end_inset
+
+ de una proteína con una conformación objetivo
+\emph on
+ j
+\emph default
+, utilizando el RMSD sólo en cada elemento de estructura secundaria (EES)
+ de la estructura de referencia y promediando los valores obtenidos.
+ Se relaciona con la topología de una proteína, y contribuye a medir la
+ similitud estructural entre dos conformaciones de proteínas comparando
+ localmente sus elementos estructurales secundarios.
+\end_layout
+
+\begin_layout Standard
+Se calcula extrayendo las posiciones de los aminoácidos de los SSEs desde
+ la primera conformación (la eferencia), usando el programa DSSP
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sander83"
+literal "true"
+
+\end_inset
+
+.
+ Las mismas posiciones se extraen de la segunda conformación (objetivo).
+ Se instala cada par de EESs y se calcula su valor RMSD, finalmente se determina
+ el promedio de todas las SSEs en la estructura de referencia: 
+\begin_inset Formula 
+\[
+LRMSD(i,j)=\frac{1}{S}\overset{S}{\underset{_{s=1}}{\sum}}RMSD(i_{s},j_{s})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+donde 
+\emph on
+i
+\emph default
+, es la conformación de referencia y
+\emph on
+ j
+\emph default
+ la conformación objetivo .
+ S es el número de EESs en la estrucutra referencia.
+
+\family roman
+ 
+\begin_inset Formula $RMSD(i_{s},j_{s})$
+\end_inset
+
+ es el valor RMSD entre el
+\change_deleted -1666014648 1535903414
+ 
+\change_unchanged
+
+\family default
+\emph on
+ 
+\emph default
+número EES s en la conformación de referencia 
+\emph on
+i 
+\emph default
+y los átomos correspondientes en la conformación del objetivo.
+\end_layout
+
+\begin_layout Standard
+\noindent
+En este trabajo, la conformación de referencia es siempre la nativa.
+\end_layout
+
+\begin_layout Subsection
+La energía potencial
+\end_layout
+
+\begin_layout Standard
+Si una proteína se toma como una molécula estática con muchos átomos interactuan
+do, su energía potencial puede ser definida como la energía dada por su
+ estructura tridimensional.
+\end_layout
+
+\begin_layout Standard
+La energía potencial está relacionada con la estabilidad termodinámica,
+ considerando que una proteína se pliega al estado de menor energía al disminuir
+ su energía potencial, y alcanza la estabilidad termodinámica en su estado
+ nativo.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dokholyan04"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si las interacciones entre los átomos de la proteína son consideradas como
+ fuerzas elásticas, entonces pueden ser escritas en términos de ecuaciones
+ conocidas como funciones de energía potencial (o campos de fuerza) en las
+ que la energía total es dada por la suma de términos enlazados y no enlazados
+ que describen átomos enlazados por enlaces covalentes e interacciones de
+ largo alcance, respectivamente.
+ A continuación se presenta una función general de energía potencial; para
+ funciones más específicas, véase
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ponder03"
+literal "true"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{total} & = & {E_{enlaces}}+E_{ángulos}+E_{torsiones}+E_{van-der-waals}+E_{electrostatica}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde las primeras tres energías corresponden a términos enlazados que describen
+ enlaces, ángulos y rotaciones de enlaces en la proteína.
+ Y, los dos últimos términos describen interacciones entre átomos no ligados
+ o átomos separados por 3 o más enlaces covalentes, la energía de interacción
+ de van der Waals y la energía electrostática.
+\end_layout
+
+\begin_layout Subsection
+El momento dipolar
+\end_layout
+
+\begin_layout Standard
+El momento dipolar puede definirse como el producto de la magnitud de la
+ carga y la distancia de separación entre las cargas de una molécula.
+\end_layout
+
+\begin_layout Standard
+El momento dipolar está relacionado con las estructuras geométricas y eléctricas
+ de una molécula; y su magnitud puede afectar la forma de una proteína,
+ su interacción intermolecular, la solución biomolecular y sus actividades
+ bioquímicas.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhao2012"
+literal "true"
+
+\end_inset
+
+.
+ Su magnitud también puede utilizarse para distinguir entre moléculas polares
+ y no polares.
+ En las proteínas, el momento dipolar se calcula como la suma vectorial
+ del momento dipolar de tres componentes: cargas fijas en la superficie,
+ grupos polares en las cadenas principales y laterales y las fluctuaciones
+ móviles de iones.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Takashima1993"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Residuos en estructuras secundarias correctas o en cualquiera
+\end_layout
+
+\begin_layout Standard
+Hélices alfa, hebras beta formando hojas beta, y otros elementos de estructura
+ secundaria
+\emph on
+ (
+\emph default
+EES
+\emph on
+s)
+\emph default
+ son contribuyentes esenciales para la estabilización del pliegue proteínico
+ general.
+ Estas estructuras son segmentos de la cadena de proteínas en los que los
+ ángulos de torsión del backbone 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\psi$
+\end_inset
+
+ se repiten en patrones regulares.
+ Hemos creado dos medidas para cuantificar la proporción de EES
+\emph on
+s
+\emph default
+ en una conformación de proteína.
+ La primera, 
+\emph on
+residuos en estructura secundaria correcta, 
+\emph default
+evalúa la proporción de residuos de una conformación objetivo que coinciden
+ con en su EES con el de la nativa.
+ La segunta, 
+\emph on
+residuos en cualquier estructura secundaria
+\emph default
+ evalúa la proporción de residuos formando cualquier EES
+\emph on
+s
+\emph default
+ en la conformación objetivo.
+\end_layout
+
+\begin_layout Standard
+Ambas medidas se calculan obteniendo y comparando los EES
+\emph on
+s
+\emph default
+ asignados por el programa DSSP
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sander83"
+literal "true"
+
+\end_inset
+
+ para las conformaciones de la proteína: objetivo y nativo para la medida
+ correcta de SSEs, y sólo objetivo para cualquier medida de EES
+\emph on
+s
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Puntaje estructural
+\end_layout
+
+\begin_layout Standard
+Esta medida fue desarrollada por Garreta y está relacionada con una tesis
+ doctoral de nuestro grupo de investigación.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+citar a Nilson
+\end_layout
+
+\end_inset
+
+.
+ Se basa en la similitud estructural entre proteínas, pero las comparaciones
+ se realizan utilizando motivos locales cortos o bloques de proteínas (BP)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KolodnyLevitt03"
+literal "true"
+
+\end_inset
+
+ en lugar de  EES
+\emph on
+s
+\emph default
+.
+ La representación de las proteínas con BP proporciona más información estructur
+al local que los EESs porque los BP resaltan las variaciones sutiles y las
+ conservaciones estructurales de la estructura.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TyagiOffmann08,KolodnyLevitt03"
+literal "true"
+
+\end_inset
+
+.
+ La estructura 3D de la proteína fue representada como una cadena unidimensional
+ de BPs a partir de una biblioteca de 40 que fueron construidos utilizando
+ fragmentos de 5 residuos que consisten en las coordenadas 3D de sus átomos
+ C-
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Para su cálculo, se codifican ambas estructuras de proteínas: objetivo
+ y nativa, transformando su representación 3D en una secuencia 1D de BPs.
+ Luego, la proporción de BPs del objetivo que se calcula que también están
+ en el nativo.
+\end_layout
+
+\begin_layout Subsection
+Clusters rígidos, regiones estresadas y grados de libertad
+\end_layout
+
+\begin_layout Standard
+Estas medidas se toman del análisis de rigidez que se ocupa de analizar
+ regiones rígidas y flexibles de una proteína.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JacobsThorpe99, Schirf11"
+literal "true"
+
+\end_inset
+
+.
+ 
+\emph on
+Clusters rígidos
+\emph default
+ son las partes de la proteína que se comportan como cuerpos rígidos (es
+ decir, las distancias entre todos los átomos permanecen fijas).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chubynsky08"
+literal "true"
+
+\end_inset
+
+.
+ 
+\emph on
+Grados de libertad
+\emph default
+ está relacionado con el número de restricciones necesarias para rigidizar
+ la estructura de la proteína 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schirf11"
+literal "true"
+
+\end_inset
+
+.
+ Y 
+\emph on
+regiones estresadas
+\emph default
+ son regiones que contienen restricciones excesivas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schirf11"
+literal "true"
+
+\end_inset
+
+, como restricciones de distancia entre los átomos impuestas por las fuerzas
+ de enlace, que reducen el número total de grados de libertad disponibles
+ para la proteína.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ThorpeKuhn01"
+literal "true"
+
+\end_inset
+
+.
+ La rigidez puede estar relacionada con la estabilidad mecánica de una proteína
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JacobsThorpe99"
+literal "true"
+
+\end_inset
+
+, que se explica como la resistencia de la proteína a desplegarse en respuesta
+ a una fuerza externa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wang06"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Estas medidas se calculan utilizando el software FIRST que implementa el
+ algoritmo del juego de los guijarros 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RaderThorpe02"
+literal "true"
+
+\end_inset
+
+.
+ Éste genera un gráfico dirigido para modelar las fuerzas físicas de las
+ restricciones debidas a la unión presente dentro de la proteína.
+ Luego FIRST comprueba cada enlace para determinar si forma parte de dos
+ tipos de elementos de rigidez: un clúster rígido o una región sometida
+ a tensión que forma una conexión flexible.
+\end_layout
+
+\begin_layout Section
+Toolkit para cálculo de métricas
+\end_layout
+
+\begin_layout Standard
+Se trata de un conjunto de herramientas de software para el análisis de
+ proteínas que ofrece un conjunto de funciones listas para usar para calcular
+ las propiedades que se describen a continuación.
+ Además, como estos cálculos se ejecutarán en rutas de plegado completas
+ o trayectorias con cientos o miles de conformaciones de proteínas, por
+ lo que usamos un marco de trabajo distribuido propio para evaluarlas de
+ forma distribuida en ordenadores de escritorio sencillos.
+\end_layout
+
+\begin_layout Subsection
+Funciones
+\end_layout
+
+\begin_layout Standard
+Las principales funciones del conjunto de herramientas se presentaron en
+ la tabla siguiente
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tabProp"
+
+\end_inset
+
+.
+ Aquí, presentamos en la Tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figFrmTlkLyt"
+
+\end_inset
+
+ las propiedades con el nombre de la función implementada y un resumen de
+ las diferentes herramientas y parámetros utilizados para calcular cada
+ propiedad.
+ El kit de herramientas ofrece un conjunto de funciones a través de programas
+ y bibliotecas independientes de python que pueden utilizarse directamente
+ desde una interfaz de línea de comandos o llamarse desde programas externos,
+ respectivamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement !t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionLG {Main functions of  protein analysis toolkit.}{}{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabcolsep=3pt
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "Ref: tabFrmFncTlk"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size scriptsize
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="3">
+<features tabularvalignment="middle">
+<column alignment="none" valignment="top" width="16text%">
+<column alignment="center" valignment="top">
+<column alignment="none" valignment="top" width="70text%">
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Function 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+ID 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Description 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+native_contacts 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+NC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+El NC utiliza mapas de contacto creados con la función cmap del paquete
+ bio3d del sistema R
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Grant2006"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+.
+ Define un umbral de contacto de 7 Å y un umbral de vecindad de 3 átomos
+\size default
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+contact_order 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+OC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+OC uses the code developed by Baker and co-workers 
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PlaxcoBaker98"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+ con un umbral de 6 Å.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+radius_gyration 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+RG 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Utiliza el g_gyrate del paquete Gromacs para la simulación de dinámica molecular
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SpoelBerendsen05"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+hydrogen_bonds 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+HB 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa el programa 
+\emph on
+hbplus
+\emph default
+ 
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "McDonaldThorton94"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+, identificando enlaces de hidrógeno con una distancia máxima de 2.6 y 3.9
+ Å para el donante-aceptor y el receptor de hidrógeno, respectivamente.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+asa 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+AS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa el programa 
+\emph on
+naccess
+\emph default
+ 
+\size default
+\emph on
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HubbardThornton1991"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+\emph default
+, con una sonda de 1.4 Å para calcular el área total polar y no polar.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+voids 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+VD 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa el programa 
+\emph on
+AVP 
+\size default
+\emph default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CuffMartin04"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+para calcular el volumen de los vacíos.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+rmsd 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+RM 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa la función 
+\emph on
+rmsd
+\emph default
+ del paquete 
+\emph on
+bio3d
+\emph default
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+local_rmsd 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+LR 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa el programa DSSP 
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sander83"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+para obtener los elementos de estructura secundaria de las proteínas.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+potential_energy 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+PE 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa el programa 
+\emph on
+analyse
+\emph default
+ del paquete 
+\emph on
+tinker
+\emph default
+ para simulación de dinámica molecular 
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PappuPonder1988"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+ con un campo de fuerza 
+\emph on
+amber96
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+dipole_moment 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+DM 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+También usa el programa 
+\emph on
+analyse
+\emph default
+ del paquete 
+\emph on
+tinker
+\emph default
+ para simulación de dinámica molecular.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+correct_sse 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+RC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa DSSP para obtener los elementos de estructura secundaria asignados para
+ cada residuo.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+any_sse 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+RA 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Como RC, usa DSSP para obtener los elementos de estructura secundaria asignados
+ para cada residuo.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+structural_score 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+SS 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Codifica la estructura objetivo y la nativa como una secuenca 1D de bloques
+ de proteína usando una versión modificada del métod PB-ALIGN 
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TyagiOffmann08"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+rigid_clusters 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+CL 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa la herramienta FIRST para análisis de rigidez
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JacobsThorpe2001"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+degrees_freedom 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+DF 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa la herramienta FIRST para análisis de rigidez
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JacobsThorpe2001"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+stressed_regions 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+SR 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Usa la herramienta FIRST para análisis de rigidez
+\size default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JacobsThorpe2001"
+literal "true"
+
+\end_inset
+
+
+\size scriptsize
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Implementación
+\end_layout
+
+\begin_layout Standard
+El kit de herramientas implementa diferentes algoritmos y sirve como 
+\emph on
+wrapper
+\emph default
+ de varias funcionalidades incluidas en otras herramientas de software para
+ la manipulación de proteínas desarrolladas en los últimos años como programas,
+ librerías, paquetes y frameworks.
+ La figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figFrmTlkLyt"
+
+\end_inset
+
+ presenta una vista de las funciones implementadas en el kit de herramientas.
+ En la capa externa están nuestras funciones utilizadas directamente para
+ evaluar las propiedades de una estructura proteica.
+ En el medio hay una capa de programas externos como bibliotecas y paquetes
+ que están 'envueltos' por nuestras funciones para implementar su funcionalidad.
+ Y en la capa interna están los diferentes lenguajes en los que se implementan
+ algunas de nuestras funciones o programas externos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.1cm
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/lg/tmp/phd/lyx/tmp/chapter-8-framework/images/toolkit-layout.pdf
+	scale 70
+	clip
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionLG{Estructura del Toolkit para análisis de proteínas} {Tres capas.
+ En la primera capa, las funciones para evaluar las propiedades de las proteínas.
+ En la segunda los programas externos 'envueltos' por nuestras funciones.
+ En la tercera,  los lenguajes de computación usados por las funciones y
+ programas externos.}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "figFrmTlkLyt"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Installation and Deployment
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "secInstallation"
+
+\end_inset
+
+El Todo el sistema consiste en un único archivo ('vm-eval.ova') que corresponde
+ a un dispositivo virtual (también conocido como máquina virtual).
+ Es un completo paquete de software listo para usar (sistema operativo con
+ aplicaciones) que no necesita configuración o instalación especial.
+ El usuario sólo necesita descargar el dispositivo (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://bioinformatica.univalle.edu.co/software/vm-eval
+\end_layout
+
+\end_inset
+
+) e importarlo a un virtualizador preinstalado (un software de virtualización
+ como VirtualBox, VMWare, Xen).
+\end_layout
+
+\begin_layout Standard
+En este proyecto hemos utilizado el virtualizador VirtualBox(
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.virtualbox.com
+\end_layout
+
+\end_inset
+
+) para construir, importar y ejecutar el artefacto.
+ Se preconfiguró con requisitos básicos de hardware que los usuarios pueden
+ cambiar de acuerdo con la capacidad del software del virtualizador y de
+ la máquina, que en VirtualBox son la cantidad de RAM asignada al dispositivo,
+ el número de núcleos de CPU virtual que debe ver el dispositivo y el porcentaje
+ de uso de la CPU (por defecto es del 100%).
+\end_layout
+
+\begin_layout Standard
+Actualmente, el dispositivo se ejecuta en un sistema operativo Linux reducido
+ (servidor Ubuntu 12.04) con una interfaz de línea de comandos.
+ El usuario predefinido que ejecuta la aplicación es el usuario
+\emph on
+ fm
+\emph default
+ (
+\emph on
+/home/fm
+\emph default
+) en cuyo directorio hay dos subdirectorios, uno para ejecutar el procesamiento
+ distribuido 
+\emph on
+(/home/fm/framework)
+\emph default
+ y otro para la aplicación del usuario 
+\emph on
+(/home/fm/application)
+\emph default
+.
+ El repositorio de nube creado para el servicio de almacenamiento en nube
+ es el 
+\emph on
+/home/fm/Dropbox
+\emph default
+).
+ Otros directorios son el repositorio de los resultados 
+\emph on
+/home/fm/results
+\emph default
+, y un sistema de archivos RAM para una lectura y escritura rápida de archivos
+ temporales 
+\emph on
+/home/fm/ramdisk
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Resultados
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+framework
+\emph default
+ se utilizó para evaluar distributivamente todas las vías y trayectorias,
+ y para realizar los análisis necesarios para culminar el presente trabajo.
+ El framework fue operado en los PCs de escritorio del Laboratorio de Bioinformá
+tica en Universidad del Valle
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://eisc.univalle.edu.co/index.php/grupos-investigacion/bioinformatica
+\end_layout
+
+\end_inset
+
+ .
+ Específicamente, realizamos la evaluación de 16 propiedades de las proteínas
+ en tres conjuntos de datos diferentes: (1) en las 16000 conformaciones
+ de una trayectoria de plegado de proteínas del subdominio de la villin
+ headpiece (HP-35NleNle) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+referencia
+\end_layout
+
+\end_inset
+
+ from the folding@home project generated by molecular dynamics (see chapter
+ 5); (2) las 37 vías obtenidas del aprendizaje basado en PRM tomado del
+ Servidor Parasol, que comprende alrededor de 6000 conformaciones (ver capítulo
+ 6); y (3) en las conformaciones 630000 de una trayectoria de plegado de
+ proteínas del subdominio de villina.
+ (HP-35NleNle) obtenidas por el gruo de investigación de David E.
+ Shaw 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LindorffShaw11"
+literal "true"
+
+\end_inset
+
+ usando dinámica molecular.
+\end_layout
+
+\begin_layout Standard
+El framework funcionó sin problemas; y los tiempos de ejecución disminuyeron
+ considerablemente en comparación con nuestros intentos antes de desarrollar
+ el framework.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Proteins"
+options "plain"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

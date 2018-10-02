@@ -1,0 +1,98 @@
+\ProvidesPackage{lgstyle}
+	\usepackage [english]{babel} 
+	\usepackage [pdftex]{graphicx,color} 
+	%\usepackage [usenames,dvipsnames]{xcolor} % Aditional colors {Blue,Red,..}
+	\usepackage {setspace} % Paragraph spacing
+	\usepackage {amsmath}  % Math symbols (underset, overset)
+	\usepackage {amssymb}    % Math symbols in Vim directly
+	\usepackage {textcomp} % Math symbols (textdegree)
+	\usepackage {verbatim} % Block comments
+	\usepackage {booktabs}   % For tables lines (toprule, midrule, bottomrule)
+	\usepackage {multirow}   % For tables lines (toprule, midrule, bottomrule)
+	\usepackage {array}    % Extended Tabular column definitions
+	\usepackage {caption}  % For exact placement of figures and tables
+	\usepackage {subcaption} % For subfloats (tables embbeded on tables or figures)
+	% Break URL and Links	
+		%\usepackage [hyphens]{url} % URLs and break them
+		\usepackage {hyperref}   % For links in TOC
+		\sloppy % Break URLs
+
+	\renewcommand{\familydefault}{\sfdefault}
+	\usepackage[T1]{fontenc}
+	%\usepackage[latin9]{inputenc}
+	\usepackage{ae,aecompl}
+	\usepackage{epstopdf}
+
+	% To numbering subsubsections
+		\setcounter{secnumdepth}{3}
+		%\setcounter{tocdepth}{3}
+
+	% Modify captions on tables and figure 
+	%\let\captiontmp\caption  % Captions of tables & figures with small fonts & spaces 
+	%\newcommand{\captionLG}[2]{ \begin{spacing}{0.5} \caption{\footnotesize \textbf{#1}{#2} \end{spacing}}}
+	\newcommand{\captionLG}[3]{
+			\caption {\footnotesize \textbf {#1} #2 {#3}}
+	}
+	%\renewcommand{\caption}[1]{ \begin{spacing}{0.5} \captiontmp {\footnotesize #1} \end{spacing}}
+
+	% Short names for property names
+		\newcommand{\NC}{Native Contacts}
+		\newcommand{\CO}{Contact Order}
+		\newcommand{\RG}{Radius of Gyration}
+		\newcommand{\HB}{Hydrogen Bonds}
+		\newcommand{\AS}{Accessible Surface Area}
+		\newcommand{\RM}{Root Mean Square Deviation}
+		\newcommand{\VD}{Voids}
+		\newcommand{\PE}{Potential Energy}
+		\newcommand{\DM}{Dipolar Moment}
+	
+% --------- Notes for revision ---------------
+% Todo notes
+% Examples: \listoftodos \todo{Some note or other.} \todo[noline]{Another note.}
+% \todo[inline]{And another one.} \missingfigure{Add my picture here.}
+
+\RequirePackage{xkeyval}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\obs}[2][] {\todo[color=green, size=\footnotesize #1]{#2}}
+% Review Observation Note
+\newcommand{\obsm}[1]{\marginpar{\color{red}{\footnotesize #1}}}
+\newcommand{\rev}[1]{\large{\textcolor{red}{{#1}}}}
+\newcommand{\revt}[1]{\textbf{\large{\textcolor{red}{#1}}}\todo [color=yellow]{???}}
+
+% Paragraph spacing
+\usepackage{titlesec}
+\setlength{\parskip}{0.2\baselineskip} % 0.2*line for all (begin, end, between)
+\titlespacing{\section}{00pt}{*1}{*1}
+\titlespacing{\subsection}{00pt}{*1}{*1}
+\titlespacing{\subsubsection}{00pt}{*1}{*1}
+%\titlespacing{\paragraph}{30pt}
+	%usepackage[left=0.1in,right=2.5in,vmargin=.3in]{geometry}
+% --- Luis Garreta stuff ---
+
+%usepackage[spanish]{babel} 
+%renewcommand{\familydefault}{\sfdefault}
+%usepackage[T1]{fontenc}
+%usepackage[latin9]{inputenc}
+%usepackage{ae,aecompl}
+%usepackage{epstopdf}
+%usepackage[hyphens]{url} % URLs and break them
+%sloppy % Break URLs
+%usepackage{array} % extrarowheight
+%usepackage{setspace} % Paraphrap spacing
+%usepackage{textcomp} % textdegree
+
+%usepackage{verbatim} % Block comment
+%usepackage{graphicx} 
+%usepackage{float}      % Place of figures (HTPB)
+%usepackage{hyperref}   % For links in TOC
+%usepackage{amstext}    % Math symbols in Vim directly
+%usepackage{amssymb}    % Math symbols in Vim directly
+%%usepackage[hmargin=.8in,vmargin=.3in]{geometry}
+%%usepackage[left=0.1in,right=2.5in,vmargin=.3in]{geometry}
+%usepackage[usenames,dvipsnames]{xcolor}
+%usepackage{caption}    % To change caption "Table" for "Tabla"
+%captionsetup[table]{name=Tabla} 
+%usepackage{threeparttable}
+%\usepackage {bigstrut}   % For row spacing, fix before [b] and top[t] (replace \hline)
+
+

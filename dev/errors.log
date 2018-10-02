@@ -1,0 +1,178 @@
+>>> LRMSD: /dev/shm/tmp_pdbs_1F/pathway0-237.pdb, /home/ppath/03-Properties/dev/1F/pathway0-238.pdb
+>>> LRMSD: dssp /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_LR_29087958-ec84-43f7-97e6-fa0b64710046_pathway0-238_pathway0-238.dssp &> /dev/null 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_0a2255ae-35b2-4c82-9826-0b923598865d_pathway0-238.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues PHE   54 A and TRP   69 A  too close !!!
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-237.pdb tmp_0a2255ae-35b2-4c82-9826-0b923598865d_pathway0-237.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues PHE   54 A and TRP   69 A  too close !!!
+>>>> SecStr: 72 72 108 
+>>>> SecStr: getProportionAAinCorrectSS 1.0 /home/ppath/03-Properties/dev/1F/pathway0-238.pdb /dev/shm/tmp_pdbs_1F/pathway0-237.pdb /home/ppath/03-Properties/dev 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-237.pdb tmp_4a3e6b98-7b40-4492-b817-5ec0749a7b60_pathway0-237.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues PHE   54 A and TRP   69 A  too close !!!
+>>>> SecStr: 72 108 
+>>>> SecStr: getProportionAAinAnySS 0.666666666667 /dev/shm/tmp_pdbs_1F/pathway0-237.pdb /home/ppath/03-Properties/dev 
+>>> LRMSD: /dev/shm/tmp_pdbs_1F/pathway0-000.pdb, /home/ppath/03-Properties/dev/1F/pathway0-238.pdb
+>>> LRMSD: dssp /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_LR_60c12f4a-49e4-4289-88b1-6ac873b13c3f_pathway0-238_pathway0-238.dssp &> /dev/null 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_c4f3313b-2fdf-4948-a84d-ba5005798a08_pathway0-238.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues PHE   54 A and TRP   69 A  too close !!!
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-000.pdb tmp_c4f3313b-2fdf-4948-a84d-ba5005798a08_pathway0-000.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues ILE   94 A and TRP   92 A  too close !!!
+>>>> SecStr: 11 72 108 
+>>>> SecStr: getProportionAAinCorrectSS 0.152777777778 /home/ppath/03-Properties/dev/1F/pathway0-238.pdb /dev/shm/tmp_pdbs_1F/pathway0-000.pdb /home/ppath/03-Properties/dev 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-000.pdb tmp_27dd2650-f65d-4b56-b812-40072bfd7744_pathway0-000.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues ILE   94 A and TRP   92 A  too close !!!
+>>>> SecStr: 53 108 
+>>>> SecStr: getProportionAAinAnySS 0.490740740741 /dev/shm/tmp_pdbs_1F/pathway0-000.pdb /home/ppath/03-Properties/dev 
+>>> LRMSD: /dev/shm/tmp_pdbs_1F/pathway0-200.pdb, /home/ppath/03-Properties/dev/1F/pathway0-238.pdb
+>>> LRMSD: dssp /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_LR_171a7e22-4fae-4bb0-8065-ed188cf5255b_pathway0-238_pathway0-238.dssp &> /dev/null 
+>>> LRMSD: /dev/shm/tmp_pdbs_1F/pathway0-050.pdb, /home/ppath/03-Properties/dev/1F/pathway0-238.pdb
+>>> LRMSD: dssp /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_LR_090f0950-4d4a-489f-9583-0ab891b38e2a_pathway0-238_pathway0-238.dssp &> /dev/null 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_34551043-31ef-4a5c-8ab2-70e1e0b37e2a_pathway0-238.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues PHE   54 A and TRP   69 A  too close !!!
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-200.pdb tmp_34551043-31ef-4a5c-8ab2-70e1e0b37e2a_pathway0-200.dssp /home/ppath/03-Properties/dev 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /home/ppath/03-Properties/dev/1F/pathway0-238.pdb tmp_62bf8c1e-034c-4b88-9b93-fa4070ae7ff6_pathway0-238.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues LYS   60 A and GLU   58 A  too close !!!
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues PHE   54 A and TRP   69 A  too close !!!
+>>>> SecStr: 36 72 108 
+>>>> SecStr: getProportionAAinCorrectSS 0.5 /home/ppath/03-Properties/dev/1F/pathway0-238.pdb /dev/shm/tmp_pdbs_1F/pathway0-200.pdb /home/ppath/03-Properties/dev 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-050.pdb tmp_62bf8c1e-034c-4b88-9b93-fa4070ae7ff6_pathway0-050.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+>>>> SecStr: 31 72 108 
+>>>> SecStr: getProportionAAinCorrectSS 0.430555555556 /home/ppath/03-Properties/dev/1F/pathway0-238.pdb /dev/shm/tmp_pdbs_1F/pathway0-050.pdb /home/ppath/03-Properties/dev 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-200.pdb tmp_75d5c08b-e76b-4df8-8b50-874be7f0c3a3_pathway0-200.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+ !!! Contact between residues LYS   60 A and GLU   58 A  too close !!!
+>>>> SecStr: 50 108 
+>>>> SecStr: getProportionAAinAnySS 0.462962962963 /dev/shm/tmp_pdbs_1F/pathway0-200.pdb /home/ppath/03-Properties/dev 
+>>>> SecStr: !!!!!!!!!!!!! runDSSP /dev/shm/tmp_pdbs_1F/pathway0-050.pdb tmp_347e26b1-1e82-432d-abed-2d00fccb65b4_pathway0-050.dssp /home/ppath/03-Properties/dev 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
+     calculated solvent accessibility includes extra atoms !!!
+
+ !!!          209 hydrogen or deuterium atoms were ignored
+     in the calculation of side chain solvent 
+     accessibility !!!
+ !!! HEADER-card missing !!!
+ !!! COMPOUND-card missing !!!
+ !!! SOURCE-card missing !!!
+ !!! AUTHOR-card missing !!!
+>>>> SecStr: 50 108 
+>>>> SecStr: getProportionAAinAnySS 0.462962962963 /dev/shm/tmp_pdbs_1F/pathway0-050.pdb /home/ppath/03-Properties/dev 

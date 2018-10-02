@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>analyzeCHARMM.pl - MMTSB</title>
+<meta name="generator" content="MediaWiki 1.25.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/mwiki-mmtsb/opensearch_desc.php" title="MMTSB (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://feig.bch.msu.edu/mwiki-mmtsb/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/mmtsb/analyzeCHARMM.pl" />
+<link rel="alternate" type="application/atom+xml" title="MMTSB Atom feed" href="/mwiki-mmtsb/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.mmtsb.styles&amp;only=styles&amp;skin=mmtsb&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mmtsbwiki:resourceloader:filter:minify-css:7:186aa9ed34970b96f0dd1fdd2e763115 */</style>
+<script src="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=mmtsb&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"analyzeCHARMM.pl","wgTitle":"analyzeCHARMM.pl","wgCurRevisionId":114598,"wgRevisionId":114598,"wgArticleId":1373,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"analyzeCHARMM.pl","wgRelevantArticleId":1373,"wgIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: mmtsbwiki:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-analyzeCHARMM_pl skin-mmtsb action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+			        <TABLE CLASS="header" CELLPADDING=4 WIDTH=100%><TR><TD VALIGN=top>
+				<a href="http://mmtsb.chem.lsa.umich.edu"><img src="/mwiki-mmtsb/skins/MMTSB/mmtsblogo-blue.gif" alt="MMTSB" /></a>
+				</TD>
+				<TD>
+				<TABLE CELLPADDING=2 CLASS="header">
+				<TR><TD CLASS="toolsettitle" WIDTH=100% ALIGN=right>
+				  Tool Set Documentation
+		    	        </TD></TR>
+				<TR><TD CLASS="searcharea" WIDTH=100% ALIGN=right>
+						<div id="p-search" class="portlet" role="search">
+			<!--<h3><label for="searchInput">Search</label></h3>-->
+
+			<div id="searchBody" class="pBody">
+				<form action="/mwiki-mmtsb/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search MMTSB [f]" accesskey="f" id="searchInput" />
+<!--					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />-->
+				</form>
+
+							</div>
+		</div>
+					</TD></TR></TABLE>	
+				</TD></TR></TABLE>	
+
+				<div id="navarea">
+   						<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<!--<h3>Navigation</h3>-->
+		<div class='pBody'>
+							<ul>
+											<li id="n-Main"><a href="/mmtsb/Main_Page">Main</a></li>
+											<li id="n-MMTSB-Research-Resource"><a href="http://www.mmtsb.org" rel="nofollow">MMTSB Research Resource</a></li>
+											<li id="n-Forum"><a href="http://www.charmm.org/ubbthreads/postlist.php?Cat=0&amp;Board=MMTSB" rel="nofollow">Forum</a></li>
+											<li id="n-Workshops"><a href="http://www.mmtsb.org/workshops.html" rel="nofollow">Workshops</a></li>
+											<li id="n-Download"><a href="http://www.mmtsb.org/cgi-bin/download?toolset" rel="nofollow">download</a></li>
+											<li id="n-Installation"><a href="/mmtsb/Installation">Installation</a></li>
+									</ul>
+					</div>
+		</div>
+					</div>
+   		                                      <div id="content">
+				
+				<a id="top"></a>
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">analyzeCHARMM.pl</h1>
+
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From MMTSB</div>
+					<div id="contentSub"></div>
+					<!--					-->
+					<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<pre>usage:   analyzeCHARMM.pl [options] [DCDfile(s)]
+options: [-inx from:to] [-time from:to] [-step size]
+         [-psf PSFfile] [-pdb PDBfile] [-crd CRDfile]
+         [-comp PDBfile] [-compcrd CRDfile]
+         [-timeonly]
+         [-out outputfile] [-cout outputfile]
+         [-log logFile] [-cmd logFile]
+         [-f listfile]
+         [-par <A HREF="http://feig.bch.msu.edu/mmtsb/CHARMM_Parameters">CHARMMparams</A>]
+         [-custom file]
+         [-custom1 file]
+         [-sel <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>] [-fitsel <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>] [-selout <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>]
+         [-dsel <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A> <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>]
+         [-tsel <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A> <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A> <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>]
+         [-qsel <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A> <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A> <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A> <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>]
+         [-mass] [-[no]fit] [-ref x y z] [-cofm] [-ndens]
+         [-rgyr] [-center] [-rms]
+         [-mindist] [-maxdist] [-alldist] [-cutoff value]
+         [-dist] [-angle] [-dihedral] [-pucker] [-glycosidic]
+         [-phi] [-psi] [-omega] [-chi1] [-chi2] [-chi3] [-chi4] [-chi5] 
+         [-epsilon] [-zeta] [-delta] [-alpha] [-beta] [-gamma]
+         [-volume] [-ientropy] [-surface]
+         [-rdist] [-diffusion]
+         [-rmsf] [-s2] [-aniso] [-rmsdyn] [-rotcor]
+         [-hbond] [-hbdist] [-hbangle] [-hbtime] [-hbunit]
+         [-avg] [-orient] [-recenter] [-norotate]
+         [-cpath] [-periodic] [-energy]
+         [-crot]
+</pre><A HREF="http://feig.bch.msu.edu/cgi-bin/mmtsb-source?analyzeCHARMM.pl" TARGET=_new>Show source</A>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Options">Options</span></h2>
+<dl><dt> -help&#160;</dt>
+<dd> usage information</dd>
+<dt> -inx from</dt>
+<dd>to&#160;: analyze the specified frame range from trajectory file</dd>
+<dt> -time from</dt>
+<dd>to&#160;: analyze the specified time range from trajectory file</dd>
+<dt> -step size&#160;</dt>
+<dd> skip the specified number of steps in between frame analyses</dd>
+<dt> -psf PSFfile&#160;</dt>
+<dd> use the specified protein structure file (PSF)</dd>
+<dt> -pdb PDBfile&#160;</dt>
+<dd> use the specified PDB file</dd>
+<dt> -crd CRDfile&#160;</dt>
+<dd> use the specified coordinate file (CRD)</dd>
+<dt> -comp PDBfile&#160;</dt>
+<dd> load a reference PDB file into the comparison coordinate set</dd>
+<dt> -timeonly&#160;</dt>
+<dd> write out only time </dd>
+<dt> -out outputfile&#160;</dt>
+<dd> generate a new trajectory file (see -orient)</dd>
+<dt> -log logFile&#160;</dt>
+<dd> generate CHARMM log file</dd>
+<dt> -cmd logFile&#160;</dt>
+<dd> generate CHARMM input file</dd>
+<dt> -f listfile&#160;</dt>
+<dd> analyze the trajectory files given in the list</dd>
+<dt> -par CHARMMparams&#160;</dt>
+<dd> use specified CHARMM parameters (see <a href="/mmtsb/CHARMM_Parameters" title="CHARMM Parameters">CHARMM_Parameters</a>)</dd>
+<dt> -custom file&#160;</dt>
+<dd> custom CHARMM commands to be read at every analysis step</dd>
+<dt> -custom1 file&#160;</dt>
+<dd> custom file that is only read once</dd>
+<dt> -sel Selection&#160;</dt>
+<dd> analyze given <a href="/mmtsb/Selection_Syntax" title="Selection Syntax">selection</a></dd>
+<dt> -fitsel Selection&#160;</dt>
+<dd> fit with respect to the comparison set based on the given <a href="/mmtsb/Selection_Syntax" title="Selection Syntax">selection</a></dd>
+<dt> -dsel Selection Selection&#160;</dt>
+<dd> double <a href="/mmtsb/Selection_Syntax" title="Selection Syntax">selection</a> used for distance measurements, etc</dd>
+<dt> -tsel Selection Selection Selection&#160;</dt>
+<dd> triple <a href="/mmtsb/Selection_Syntax" title="Selection Syntax">selection</a> used for angle measurements, etc</dd>
+<dt> -qsel Selection Selection Selection Selection&#160;</dt>
+<dd> quadruple <a href="/mmtsb/Selection_Syntax" title="Selection Syntax">selection</a> used for dihedral angle measurements, etc</dd>
+<dt> -mass&#160;</dt>
+<dd> use mass weighted fitting</dd>
+<dt> -[no]fit&#160;</dt>
+<dd> perform least-squares superposition before analyzing (see -fitsel)</dd>
+<dt> -ref x y z&#160;</dt>
+<dd> use fixed reference point</dd>
+<dt> -cofm&#160;</dt>
+<dd> use center-of-mass for selection</dd>
+<dt> -ndens&#160;</dt>
+<dd> report number density</dd>
+<dt> -rgyr&#160;</dt>
+<dd> calculate the radius of gyration</dd>
+<dt> -center&#160;</dt>
+<dd> calculate the center of geometry</dd>
+<dt> -rms&#160;</dt>
+<dd> calculate the root mean square deviation</dd>
+<dt> -mindist&#160;</dt>
+<dd> calculate the minimum distance</dd>
+<dt> -maxdist&#160;</dt>
+<dd> calculate the maximum distance</dd>
+<dt> -dist&#160;</dt>
+<dd> calculate the distance between two selections</dd>
+<dt> -angle&#160;</dt>
+<dd> calculate the angle between three selections</dd>
+<dt> -dihedral&#160;</dt>
+<dd> calculate the dihedral angle between four selections</dd>
+<dt> -pucker&#160;</dt>
+<dd> calculate the sugar pucker for a given nucleotide </dd>
+<dt> -glycosidic&#160;</dt>
+<dd> calculate the glycosidic bond type for a given nucleotide</dd>
+<dt> -phi&#160;</dt>
+<dd> calculate the phi backbone dihedral angle for a given selection</dd>
+<dt> -psi&#160;</dt>
+<dd> calculate the psi backbone dihedral angle for a given selection</dd>
+<dt> -omega&#160;</dt>
+<dd> calculate the omega backbone dihedral angle for a given selection</dd>
+<dt> -chi1&#160;</dt>
+<dd> calculate the chi1 sidechain dihedral angle for a given selection</dd>
+<dt> -chi2&#160;</dt>
+<dd> calculate the chi2 sidechain dihedral angle for a given selection</dd>
+<dt> -chi3&#160;</dt>
+<dd> calculate the chi3 sidechain dihedral angle for a given selection</dd>
+<dt> -chi4&#160;</dt>
+<dd> calculate the chi4 sidechain dihedral angle for a given selection</dd>
+<dt> -chi5&#160;</dt>
+<dd> calculate the chi5 sidechain dihedral angle for a given selection</dd>
+<dt> -epsilon&#160;</dt>
+<dd> calculate the epsilon backbone dihedral angle for a given selection</dd>
+<dt> -zeta&#160;</dt>
+<dd> calculate the zeta backbone dihedral angle for a given selection</dd>
+<dt> -delta&#160;</dt>
+<dd> calculate the delta backbone dihedral angle for a given selection</dd>
+<dt> -alpha&#160;</dt>
+<dd> calculate the alpha backbone dihedral angle for a given selection</dd>
+<dt> -beta&#160;</dt>
+<dd> calculate the beta backbone dihedral angle for a given selection</dd>
+<dt> -gamma&#160;</dt>
+<dd> calculate the gamma backbone dihedral angle for a given selection</dd>
+<dt> -volume&#160;</dt>
+<dd> calculate the molecular volume</dd>
+<dt> -ientropy&#160;</dt>
+<dd> calculate entropy from moment of inertia</dd>
+<dt> -surface&#160;</dt>
+<dd> calculate the solvent accessible surface area</dd>
+<dt> -rdist&#160;</dt>
+<dd> calculate the normalized radial distribution function of atoms in one selection with respect to atoms in another selection</dd>
+<dt> -diffusion&#160;</dt>
+<dd> calculate diffusion constant</dd>
+<dt> -rmsf&#160;</dt>
+<dd> calculate the root mean square fluctuation</dd>
+<dt> -s2&#160;</dt>
+<dd> calculate NMR order parameters</dd>
+<dt> -avg&#160;</dt>
+<dd> calculate average conformation</dd>
+<dt> -orient&#160;</dt>
+<dd> orient each trajectory frame</dd></dl>
+<h2><span class="mw-headline" id="Structural_quantities">Structural quantities</span></h2>
+<ul><li> <b>Radius of gyration</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-rgyr</b>  
+ 1 1 0.020000 8.39271
+ 2 2 0.040000 8.40157
+ 3 3 0.060000 8.41569
+ 4 4 0.080000 8.41470
+ 5 5 0.100000 8.40683
+ ...
+</pre>
+<pre> analyzeCHARMM.pl -rgyr <b>-mass</b>        # mass weighted
+ analyzeCHARMM.pl -rgyr <b>-sel <i>@SEL</i> </b>      # using C-beta atoms
+</pre>
+<ul><li> <b>Center of geometry/mass</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-center</b>               # center of geometry
+</pre>
+<pre> 1 1 0.020000 0.40100 -4.63176 -2.97582
+ 2 2 0.040000 0.39378 -4.63659 -2.98150
+ 3 3 0.060000 0.40375 -4.64259 -2.97458
+ 4 4 0.080000 0.40161 -4.63427 -2.98087
+ 5 5 0.100000 0.40632 -4.63495 -2.98142
+</pre>
+<pre> analyzeCHARMM.pl -center <b>-mass</b>    <i> # center of mass</i>
+ analyzeCHARMM.pl -center <b>-sel <i>@SEL</i> </b>   # for residues 1 to 4
+</pre>
+<ul><li> <b>Molecular volume</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-volume</b>               
+
+ output contains total volume and free volume within solute cavity:
+ 
+ 1 1 0.020000 2035.228189 1.673453
+ 2 2 0.040000 2045.718088 2.193564
+ 3 3 0.060000 2073.108204 1.823200
+ 4 4 0.080000 2069.752854 1.300382
+ 5 5 0.100000 2064.565380 1.277143
+</pre>
+<ul><li> <b>Solvent-accessible surface area</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-surface</b> 
+</pre>
+<pre> 1 1 0.020000 1808.42205
+ 2 2 0.040000 1825.50226
+ 3 3 0.060000 1847.81815
+ 4 4 0.080000 1854.86649
+ 5 5 0.100000 1838.83944
+</pre>
+<pre> analyzeCHARMM.pl -surface -par proberad=1.0           # probe radius: [0.0,100.0], def. 1.4
+ analyzeCHARMM.pl -sel <i>@SEL</i> -surface               # select subset of structure
+</pre>
+<pre> analyzeCHARMM.pl -dsel <i>@SEL1</i> <i>@SEL2</i> -surface   # calculates surface for second set in the context of the first set
+</pre>
+<h2><span class="mw-headline" id="Geometric_quantities">Geometric quantities</span></h2>
+<ul><li> <b>Distances</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-dist</b> -dsel <i>@SEL1</i> <i>@SEL2</i>
+</pre>
+<pre> calculates distance between individual atoms or center of geometry/mass if selection includes
+ more than one atom
+</pre>
+<pre> 1 1 12241.200000 14.11953
+ 2 2 12241.400000 14.27596
+ 3 3 12241.600000 14.09303
+ 4 4 12241.800000 14.60734
+ 5 5 12242.000000 14.50452
+</pre>
+<pre> analyzeCHARMM.pl <b>-dist</b> -dsel <i>@SEL1</i> <i>@SEL2</i> -mass   # use center of mass instead of geometry
+</pre>
+<ul><li> <b>Minimum distance</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-mindist</b> -dsel <i>@SEL1</i> <i>@SEL2</i>
+</pre>
+<pre> calculates the minimum distance between two sets of atoms and lists which atoms form the
+ closest pair
+</pre>
+<pre> 1 1 12241.200000 9.8103 PRO0:MET:1:HG1 PRO0:LEU:5:N
+ 2 2 12241.400000 10.2972 PRO0:MET:1:O PRO0:LEU:5:N
+ 3 3 12241.600000 10.0149 PRO0:MET:1:HG1 PRO0:LEU:5:N
+ 4 4 12241.800000 10.0283 PRO0:MET:1:O PRO0:LEU:5:N
+ 5 5 12242.000000 10.3612 PRO0:MET:1:HG1 PRO0:LEU:5:N
+</pre>
+<ul><li> <b>Maximum distance</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-maxdist</b> -dsel <i>@SEL1</i> <i>@SEL2</i>
+
+ calculates the maximum distance between two sets of atoms and lists which atoms form the
+ farthest pair
+</pre>
+<pre> 1 1 12241.200000 18.5360 PRO0:MET:1:HE1 PRO0:LEU:5:HD22
+ 2 2 12241.400000 18.2772 PRO0:MET:1:HE2 PRO0:LEU:5:HD22
+ 3 3 12241.600000 18.2094 PRO0:MET:1:HE1 PRO0:LEU:5:HD22
+ 4 4 12241.800000 18.7409 PRO0:MET:1:HE1 PRO0:LEU:5:HD22
+ 5 5 12242.000000 18.5781 PRO0:MET:1:HE1 PRO0:LEU:5:HD22
+</pre>
+<ul><li> <b>Angle</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-angle</b> -tsel <i>@SEL1</i> <i>@SEL2</i> <i>@SEL3</i> [-mass]
+</pre>
+<pre> calculates the angle spanned by three atoms or centers of geometry/mass
+</pre>
+<pre> 1 1 12241.200000 144.775
+ 2 2 12241.400000 143.582
+ 3 3 12241.600000 149.128
+ 4 4 12241.800000 146.636
+ 5 5 12242.000000 145.757
+</pre>
+<ul><li> <b>Dihedral</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-dihedral</b> -qsel <i>@SEL1</i> <i>@SEL2</i> <i>@SEL3</i> <i>@SEL4</i> [-mass]
+</pre>
+<pre> calculates the dihedral spanned by four atoms or centers of geometry/mass
+</pre>
+<pre> 1 1 12241.200000 177.110
+ 2 2 12241.400000 176.090
+ 3 3 12241.600000 173.423
+ 4 4 12241.800000 171.144
+ 5 5 12242.000000 170.831
+</pre>
+<ul><li> <b>Peptide torsions</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-phi</b>|<b>-psi</b>|<b>-omega</b>|<b>-chi1</b> -sel @SEL
+</pre>
+<pre> calculates standard peptide torsions phi/psi/omega/chi1 for the residues selected
+ in the given selection.
+</pre>
+<pre> 1 1 12241.200000 -107.801 -115.927
+ 2 2 12241.400000 -123.998 -129.870
+ 3 3 12241.600000 -114.029 -132.415
+ 4 4 12241.800000 -118.533 -119.548
+ 5 5 12242.000000 -128.236 -116.957
+</pre>
+<ul><li> <b>Nucleic acid backbone torsions</b></li></ul>
+<pre> analyzeCHARMM.pl <b>-epsilon</b>|<b>-zeta</b>|<b>-delta</b>|<b>-alpha</b>|<b>-beta</b>|<b>-gamma</b> -sel @SEL
+</pre>
+<pre> calculates standard nucleic acid backbone torsions for the residues selected
+ in the given selection.
+</pre>
+<pre> 1 1 12241.200000 -107.801 -115.927
+ 2 2 12241.400000 -123.998 -129.870
+ 3 3 12241.600000 -114.029 -132.415
+ 4 4 12241.800000 -118.533 -119.548
+ 5 5 12242.000000 -128.236 -116.957
+</pre>
+<ul><li> <b>Nucleic acid sugar pucker</b></li></ul>
+<pre> analyzeCHARMM.pl -pucker -sel @SEL
+</pre>
+<pre> calculates the sugar pucker phase and amplitude for the residues selected in
+ the given selection
+</pre>
+<pre> 1 1 3.825000 134.90 50.3298
+ 2 2 3.900000 123.16 48.9725
+ 3 3 3.975000 131.20 50.0423
+ 4 4 4.050000 143.38 41.2196
+ 5 5 4.125000 169.54 41.9678
+</pre>
+<ul><li> <b>Nucleic acid glycosidic torsion</b></li></ul>
+<pre> analyzeCHARMM.pl -glycosidic -sel @SEL
+</pre>
+<pre> calculates the glycosidic torsion for the residues selected in
+ the given selection
+</pre>
+<pre> 1 1 3.825000 -169.625
+ 2 2 3.900000 -176.319
+ 3 3 3.975000 -172.100
+ 4 4 4.050000 -160.011
+ 5 5 4.125000 -158.718
+</pre>
+<h2><span class="mw-headline" id="Comparison_with_reference">Comparison with reference</span></h2>
+<ul><li> <b>Coordinate root mean square displacement</b></li></ul>
+<pre> analyzeCHARMM.pl -rms -sel @SEL -comp @REFPDB
+</pre>
+<pre> calculates the RMSD with respect to reference PDB after least-squares superposition
+</pre>
+<pre> 1 1 3.825000 2.733075
+ 2 2 3.900000 2.724830
+ 3 3 3.975000 2.736593
+ 4 4 4.050000 2.726076
+ 5 5 4.125000 2.720903
+</pre>
+<pre> analyzeCHARMM.pl -nofit -rms -sel @SEL -comp @REFPDB         # do not fit structure
+ analyzeCHARMM.pl -rms -sel @SEL1 -fitsel @SEL2 -comp @REFPDB  # superimpose different part of the structure than the part for which RMSD is calculated
+</pre>
+<h2><span class="mw-headline" id="Clustering.2FAverage">Clustering/Average</span></h2>
+<h2><span class="mw-headline" id="Distribution_functions">Distribution functions</span></h2>
+<ul><li> <b>Radial distribution function</b></li></ul>
+<pre> analyzeCHARMM.pl -rdist -dsel @SEL1 @SEL2  
+</pre>
+<pre> calculates the normalized radial distribution function of atoms in set 1 
+ with respect to atoms in set 2 
+</pre>
+<pre> 0.157960 0.000000
+ 0.315930 0.000000
+ 0.473890 0.000000
+ 0.631860 0.000000
+ 0.789820 0.000000
+ 0.947780 0.000000
+ 1.105700 0.000000
+ 1.263700 0.000000
+ 1.421700 0.000000
+ 1.579600 0.000373
+ 1.737600 0.011711
+ 1.895600 0.054040
+ 2.053500 0.065664
+ 2.211500 0.056921
+ 2.369500 0.088735
+ 2.527400 0.214377
+ 2.685400 0.418000
+</pre>
+<pre> analyzeCHARMM.pl -rdist -dsel @SEL1 @SEL2 -ndens        # report number density
+ analyzeCHARMM.pl -rdist -dsel @SEL1 @SEL2 -cofm         # use center of mass of second selection
+ analyzeCHARMM.pl -rdist -sel @SEL1 -ref x y z           # use fixed reference point
+ analyzeCHARMM.pl -rdist -par rdfbins=100                # set number of bins
+ analyzeCHARMM.pl -rdist -par rdfrmax=10.0               # set maximum value
+</pre>
+<h2><span class="mw-headline" id="Dynamic_parameters">Dynamic parameters</span></h2>
+<ul><li> <b>Root mean square fluctuation</b></li></ul>
+<pre> analyzeCHARMM.pl -rmsf -sel @SEL   
+</pre>
+<pre> calculates the root mean square fluctuation for the selected atoms
+</pre>
+<pre> PRO0:ALA:1:CAY 16.379000
+ PRO0:ALA:1:CY 16.146000
+ PRO0:ALA:1:OY 16.115000
+ PRO0:ALA:1:N 16.134000
+ PRO0:ALA:1:CA 16.102000
+ PRO0:ALA:1:CB 16.327000
+ PRO0:ALA:1:C 16.065000
+ PRO0:ALA:1:O 16.290000
+ PRO0:ALA:1:NT 15.935000
+ PRO0:ALA:1:CAT 16.062000
+</pre>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Energetics">Energetics</span></h2>
+<h2><span class="mw-headline" id="Common_parameters">Common parameters</span></h2>
+<ul><li> <b>@ATOP</b></li></ul>
+<pre> topology information for analyzeCHARMM.pl:
+ -pdb file.pdb
+ -par blocked -pdb file.pdb
+ -par param=simdb -pdb file.pdb  
+ -psf file.psf
+</pre>
+<ul><li> <b>@DCD</b></li></ul>
+<pre> DCD file name
+</pre>
+<ul><li> <b>@SEL</b></li></ul>
+<pre> atom/residue selection string
+</pre>
+<!-- 
+NewPP limit report
+CPU time usage: 0.068 seconds
+Real time usage: 0.518 seconds
+Preprocessor visited node count: 48/1000000
+Preprocessor generated node count: 64/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=analyzeCHARMM.pl&amp;oldid=114598">http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=analyzeCHARMM.pl&amp;oldid=114598</a>"</div>
+					<div id='catlinks' class='catlinks catlinks-allhidden'></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="editarea">
+				<div id="p-cactions" class="portlet" role="navigation">
+			<!--<h3>Views</h3>-->
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/mmtsb/analyzeCHARMM.pl" title="View the content page [c]" accesskey="c">Documentation</a></li>
+				<li id="ca-talk" class="new"><a href="/mwiki-mmtsb/index.php?title=Talk:analyzeCHARMM.pl&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Comments</a></li>
+				<li id="ca-viewsource"><a href="/mwiki-mmtsb/index.php?title=analyzeCHARMM.pl&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/mwiki-mmtsb/index.php?title=analyzeCHARMM.pl&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+			</div>
+
+		<div class="visualClear"></div>
+		
+	      <TABLE CLASS="footer" CELLSPACING=4 WIDTH=100%>
+              <TR><TD CLASS="groups">
+              <A HREF="http://brooks.chem.lsa.umich.edu">&nbsp;Brooks group</A><BR>
+              <A HREF="http://feig.bch.msu.edu">&nbsp;Feig group</A>
+	      </TD>
+	      <TD CLASS="pageinfo">
+	        <ul>
+
+<!--
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="//www.mediawiki.org/"><img src="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mwiki-mmtsb/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>
+							</div>
+		</div>		-->
+                </ul>
+		</TD>
+		</TR></TABLE>
+
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":2217});
+}</script></body></html>

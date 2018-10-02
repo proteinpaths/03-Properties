@@ -1,0 +1,28 @@
+Fifteen of the 32 analytical properties calculated as standard for all Dynameo-
+mics targets (10) were included in the property space: 
+	- native contacts, 
+	- nonnative contacts, 
+	- radius of gyration, 
+	- end-to-end distance, 
+	- main-chain SASA,
+	- side-chain SASA, 
+	- polar SASA, 
+	- nonpolar SASA, 
+	- main-chain polar SASA,
+	- main-chain nonpolar SASA, 
+	- side-chain polar SASA, 
+	- side-chain nonpolar SASA, 
+	- total SASA, 
+	- fraction of helix, and 
+	- fraction of b. 
+
+SASA was calculated
+according to the algorithm of Lee and Richards (23) with a probe radius of
+1.4 Å. The 15 properties were chosen so that there would be minimal compar-
+ison to a reference structure (e.g., Ca RMSD and CONGENEAL scores (24)
+were discarded because they are relative to the starting structure), and protein-
+wide descriptors were preferred over residue-wide (e.g., V and j angles) or
+atomic-level descriptors. It was necessary for the properties to be general
+enough to be applicable to all the protein metafolds within the 188 proteins
+so that the general features of the RXN coordinate could be determined.
+The 15 properties were compiled from each simulation of a particular

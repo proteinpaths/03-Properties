@@ -1,0 +1,34 @@
+>>> LRMSD: p1.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_a64b0798-4494-407a-91f1-10c7be6dc9be_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p1.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_b16c789c-5393-42a9-b41c-609c0a8f3a7d_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p0.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_813b0ce6-ae9d-435f-85bf-924711141cb3_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p100.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_b1b81e52-1dca-4be2-a88b-62a5c9ffd550_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p200.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_74b03a05-1c01-49b5-9939-5bea5096bb49_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p238.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_c7db507e-a0f0-45b5-8f63-86b9b3c6833c_pN_pN.dssp &> /dev/null 
+>>> LRMSD: pN.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_6d46bfc6-c4b7-40fa-aef1-4bc24a0067bc_pN_pN.dssp &> /dev/null 
+>>> LRMSD: pN.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_93a344c5-21db-47ab-9326-f0f699fd800f_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p0.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_8b15e497-be29-4f40-9869-fda7d171c542_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p0.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_08d0455a-80fd-4980-92d8-c1b7a7f1f9b9_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p1.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_4c4edd66-6457-4c83-9c16-e2739e888f96_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p100.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_65660a6c-c2b6-4e5f-b18a-147f0d2191de_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p200.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_355ade4b-b8b9-4860-b12b-e681d8aec243_pN_pN.dssp &> /dev/null 
+>>> LRMSD: pN.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_8e7cde27-ffa1-4360-92aa-e41691d79201_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p0.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_38154dfc-587a-4637-ad96-4770f70b595a_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p1.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_4c58af08-0e0b-4b60-9b99-60acb0b7f315_pN_pN.dssp &> /dev/null 
+>>> LRMSD: p100.pdb, pN.pdb
+>>> LRMSD: dssp pN.pdb tmp_LR_2494a4ec-6098-45e1-96ed-0fb9cde5d5ed_pN_pN.dssp &> /dev/null 

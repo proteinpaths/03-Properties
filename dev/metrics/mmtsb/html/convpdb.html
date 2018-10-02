@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>convpdb.pl - MMTSB</title>
+<meta name="generator" content="MediaWiki 1.25.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/mwiki-mmtsb/opensearch_desc.php" title="MMTSB (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://feig.bch.msu.edu/mwiki-mmtsb/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/mmtsb/convpdb.pl" />
+<link rel="alternate" type="application/atom+xml" title="MMTSB Atom feed" href="/mwiki-mmtsb/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.mmtsb.styles&amp;only=styles&amp;skin=mmtsb&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mmtsbwiki:resourceloader:filter:minify-css:7:186aa9ed34970b96f0dd1fdd2e763115 */</style>
+<script src="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=mmtsb&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"convpdb.pl","wgTitle":"convpdb.pl","wgCurRevisionId":114659,"wgRevisionId":114659,"wgArticleId":1475,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"convpdb.pl","wgRelevantArticleId":1475,"wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: mmtsbwiki:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-convpdb_pl skin-mmtsb action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+			        <TABLE CLASS="header" CELLPADDING=4 WIDTH=100%><TR><TD VALIGN=top>
+				<a href="http://mmtsb.chem.lsa.umich.edu"><img src="/mwiki-mmtsb/skins/MMTSB/mmtsblogo-blue.gif" alt="MMTSB" /></a>
+				</TD>
+				<TD>
+				<TABLE CELLPADDING=2 CLASS="header">
+				<TR><TD CLASS="toolsettitle" WIDTH=100% ALIGN=right>
+				  Tool Set Documentation
+		    	        </TD></TR>
+				<TR><TD CLASS="searcharea" WIDTH=100% ALIGN=right>
+						<div id="p-search" class="portlet" role="search">
+			<!--<h3><label for="searchInput">Search</label></h3>-->
+
+			<div id="searchBody" class="pBody">
+				<form action="/mwiki-mmtsb/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search MMTSB [f]" accesskey="f" id="searchInput" />
+<!--					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />-->
+				</form>
+
+							</div>
+		</div>
+					</TD></TR></TABLE>	
+				</TD></TR></TABLE>	
+
+				<div id="navarea">
+   						<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<!--<h3>Navigation</h3>-->
+		<div class='pBody'>
+							<ul>
+											<li id="n-Main"><a href="/mmtsb/Main_Page">Main</a></li>
+											<li id="n-MMTSB-Research-Resource"><a href="http://www.mmtsb.org" rel="nofollow">MMTSB Research Resource</a></li>
+											<li id="n-Forum"><a href="http://www.charmm.org/ubbthreads/postlist.php?Cat=0&amp;Board=MMTSB" rel="nofollow">Forum</a></li>
+											<li id="n-Workshops"><a href="http://www.mmtsb.org/workshops.html" rel="nofollow">Workshops</a></li>
+											<li id="n-Download"><a href="http://www.mmtsb.org/cgi-bin/download?toolset" rel="nofollow">download</a></li>
+											<li id="n-Installation"><a href="/mmtsb/Installation">Installation</a></li>
+									</ul>
+					</div>
+		</div>
+					</div>
+   		                                      <div id="content">
+				
+				<a id="top"></a>
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">convpdb.pl</h1>
+
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From MMTSB</div>
+					<div id="contentSub"></div>
+					<!--					-->
+					<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<pre>usage:   convpdb.pl [options] [PDBfile]
+options: [-center] [-translate dx dy dz] [-orient]
+         [-rotate m11 m12 m13 m21 m22 m23 m31 m32 m33]
+         [-rotatex phi] [-rotatey phi] [-rotatez phi]
+         [-biomt num] [-smtry num]
+         [-scale factor] [-diff PDBfile] [-difflsqfit] [-add PDBFile]
+         [-nmode file amplitude weight]
+         [-nmodesample file prefix from to delta] [-skipzero]
+         [-sel list] [-exclude list]
+         [-chain id] [-model num] [-firstmodel] [-nohetero]
+         [-selseq abbrev]
+         [-nsel <A HREF="http://feig.bch.msu.edu/mmtsb/Selection_Syntax">Selection</A>]
+         [-merge pdbfile]
+         [-renumber start] [-addres value]
+         [-renumwatersegs]
+         [-match pdbfile]
+         [-setchain id] [-setseg id] [-setall]
+         [-readseg] [-chainfromseg] [-splitseg]
+         [-charmm19] [-amber]
+         [-out charmm19 | charmm22 | amber | generic]
+         [-crd] [-crdext]
+         [-segnames]
+         [-fixcoo]
+         [-ssbond res1:res2[=res1:res2]] [-nossbond]
+         [-solvate] [-cutoff value] [-solvcut value]
+         [-octahedron] [-cubic]
+         [-ions NAME:num[=NAME:num]]
+         [-replace PDB:num]
+         [-info] [-listseg] [-residues] [-rescount]
+         [-fill inx:seq]
+         [-mol2]
+         [-cleanaux]
+         [-setaux1 value] [-setaux2 value]
+         [-removeclashes] [-clashes] [-clashcut value]
+         [-wrap boxx boxy boxz] [-by chain|atom|system]
+</pre><A HREF="http://feig.bch.msu.edu/cgi-bin/mmtsb-source?convpdb.pl" TARGET=_new>Show source</A>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<p>Converts and manipulates a protein structure PDB file.
+The input is read through standard 
+input or from a file given as a command line argument. With the 
+option <b>-renumber</b> renumbering of the residues can be requested 
+to obtain continuous residue numbering starting from a given 
+number. Alternatively, the option <b>-add</b> adds a constant 
+to every residue number for the case of missing residues in the
+PDB file when continuous renumbering would not be desirable. As a third
+option the residue numbering may be adjusted to match the numbering in 
+a reference PDB file given with <b>-match</b> by searching for
+the best sequence match.<br />
+</p><p>If the input PDB file comes from CHARMM with the CHARMM19 force field 
+the option <b>-charmm19</b> needs to be specified to correctly identify
+histidine residues. Output is written by default for the CHARMM22 
+protein force field but the format can be selected with the <b>-out</b>
+option. Possible values are <font color="#308010">charmm19</font>, <font color="#308010">charmm22</font>, 
+<font color="#308010">amber</font>, and <font color="#308010">generic</font>. With the <font color="#308010">generic</font> option
+all histidine residues as named <font color="#308010">HIS</font> regardless of the name or
+protonation state in the input file. It is also possible to append <font color="#308010">noh</font> 
+to the format name to request exclusion of all hydrogen atoms in the 
+output.<br />
+</p><p>The molecule can be centered at the origin with <b>-center</b>
+or shifted with <b>-translate dx dy dz</b>.
+<br />
+</p><p>With <b>-sel</b> followed by a list of residues can be used to select
+a subset of residues. This may be done, e.g., for loop modeling applications
+where only the neighborhood of the loop under consideration is 
+needed for modeling. This option is complemented by <b>-merge</b> for
+merging a template structure from a PDB file with another PDB file. Again,
+this functionality is particularly useful for loop modeling in order
+to reassemble a complete protein structure if only the loop vicinity
+is being used during modeling. Alternatively, one may also specify a
+list of residues with <b>-exclude</b> that should be excluded from 
+the output.<br />
+</p><p>A structure fragment can also be selected based on its amino acid sequence given
+with the option <b>-selseq</b>. The sequence has to match exactly part of 
+the sequence of the input structure for this option to work and only 
+a single fragment can be extracted at a time.<br />
+</p><p>For multidomain structures the option <b>-chain</b> is available to select
+a particular chain. The chain ID may be set or changed with <b>-setchain</b>.
+<br />
+</p><p>Files from the PDB data bank often contain residues in addition to a biomolecule
+of interest such us solvent or small ligands. They are usually denoted 
+with HETATM records. The option <b>-nohetero</b> is available to ignore
+such atoms when a PDB structure is read.<br />
+</p><p>A few options are available to handle CHARMM segment names. If
+<b>-readseg</b> is given, the CHARMM segment names are read from the output.
+The option <b>-chainfromseg</b> is available to set chain IDs from the last
+letter of the segment names.<br />
+</p><p>With <b>-segnames</b> segment names are included in the output file.
+Segement IDs are necessary for using a PDB file with CHARMM. Unless they
+have been read from the input file they are generated automatically if
+this option is given.
+<br />
+</p><p>The option <b>-fixcoo</b> can be used to ensure reasonable c-terminal oxygen
+coordinates. If the second terminal oxygen is missing or has incorrect
+coordinates it will be rebuilt correctly with this option. 
+<br />
+</p><p>If SSBOND records are present in the input file to indicate the presence
+of disulfide bonds, they are maintained. The option <b>-nossbond</b> is
+available to suppress SSBOND records. In order to add disulfide bonds 
+to a PDB file, the option <b>-ssbond</b> may be used with a list of 
+cystine residue pairs.<br />
+</p><p>Finally, this script can be used to solvate the input PDB structure
+in a rectangular (default), cubic, or octahedrol box of pre-equilibrated 
+water molecules. This is possible with the option <b>-solvate</b>. The
+type of box is selected with <b>-cubic</b> or <b>-octahedron</b>. A cutoff
+value may be specified with <b>-cutoff</b> to indicate the minimum margin from
+the molecule that is being solvated to the edge of the box.<br />
+</p>
+<h2><span class="mw-headline" id="Options">Options</span></h2>
+<dl><dt> -help&#160;</dt>
+<dd> usage information</dd>
+<dt> -center&#160;</dt>
+<dd> centers the molecule with respect to the origin</dd>
+<dt> -translate dx dy dz&#160;</dt>
+<dd> translates the molecule according to the given displacements</dd>
+<dt> -rotate m11 m12 m13 m21 m22 m23 m31 m32 m33&#160;</dt>
+<dd> rotates the molecule according to the given 3x3 rotation matrix (in 3D)</dd>
+<dt> -rotatex phi&#160;</dt>
+<dd> rotates the molecule about the x-axis according to the given phi angle</dd>
+<dt> -rotatey phi&#160;</dt>
+<dd> rotates the molecule about the y-axis according to the given phi angle</dd>
+<dt> -rotatez phi&#160;</dt>
+<dd> rotates the molecule about the z-axis according to the given phi angle</dd>
+<dt> -scale factor&#160;</dt>
+<dd> scales the molecule's coordinates according to the given factor</dd>
+<dt> -diff PDBfile&#160;</dt>
+<dd> returns the difference in coordinate values between two PDB files</dd>
+<dt> -difflsqfit&#160;</dt>
+<dd> perform least-squares fit before calculating difference </dd>
+<dt> -add PDBfile&#160;</dt>
+<dd> returns the summed coordinate values between two PDB files</dd>
+<dt> -sel list&#160;</dt>
+<dd> select a subset of residues according to a user defined list</dd>
+<dt> -exclude list&#160;</dt>
+<dd> exclude a subset of residues according to a user defined list</dd>
+<dt> -chain id&#160;</dt>
+<dd> select a specific chain according to the given id</dd>
+<dt> -model num&#160;</dt>
+<dd> select a specific NMR model according to the given number</dd>
+<dt> -nohetero&#160;</dt>
+<dd> exclude hetero atoms</dd>
+<dt> -selseq abbrev&#160;</dt>
+<dd> select a specific amino acid sequence according to the given single letter abbreviated amino acid code</dd>
+<dt> -nsel <a href="/mmtsb/Selection" title="Selection" class="mw-redirect">Selection</a></dt>
+<dd> select part of the structure with new selection syntax  </dd>
+<dt> -merge PDBfile&#160;</dt>
+<dd> appends a PDB file</dd>
+<dt> -renumber start&#160;</dt>
+<dd> renumbers the residues according to the given start value</dd>
+<dt> -addres value&#160;</dt>
+<dd> add the given value to all residue number</dd>
+<dt> -renumwatersegs&#160;</dt>
+<dd> renumbers water segment IDs</dd>
+<dt> -match PDBfile&#160;</dt>
+<dd> renumber residues to match the numbering in the given PDB file</dd>
+<dt> -setchain id&#160;</dt>
+<dd> sets the chain ID according to the given ID</dd>
+<dt> -readseg&#160;</dt>
+<dd> read segment IDs from last column of PDB file </dd>
+<dt> -chainfromseg&#160;</dt>
+<dd> generate the segment ID based on the chain ID</dd>
+<dt> -charmm19&#160;</dt>
+<dd> read input PDB as CHARMM19 format</dd>
+<dt> -amber&#160;</dt>
+<dd> read input PDB as Amber format</dd>
+<dt> -out charmm19|charmm22|amber|generic&#160;</dt>
+<dd> specify output format </dd>
+<dt> -segnames&#160;</dt>
+<dd> automatically generate segment IDs</dd>
+<dt> -fixcoo&#160;</dt>
+<dd> fix C-terminal atoms</dd>
+<dt> -ssbond res1</dt>
+<dd>res2[=res1:res2]&#160;: add disulfide information in form of SSBOND record(s)</dd>
+<dt> -nossbond&#160;</dt>
+<dd> do not write out SSBOND records</dd>
+<dt> -solvate&#160;</dt>
+<dd> solvates the molecule by calling external <tt>solvate</tt> program</dd>
+<dt> -cutoff value&#160;</dt>
+<dd> defines the minimum distance from molecule to edge of solvation box</dd>
+<dt> -octahedron&#160;</dt>
+<dd> solvate the molecule using an octahedron</dd>
+<dt> -cubic&#160;</dt>
+<dd> solvate the molecule using a cubic box</dd>
+<dt> -ions NAME&#58;num[=NAME&#58;num]&#160;</dt>
+<dd> add ions called NAME according to the given number</dd>
+<dt> -info&#160;</dt>
+<dd> write out some information about a given PDB structure</dd>
+<dt> -fill inx&#58;seq&#160;</dt>
+<dd> add C-alpha atom records with zero coordinates for missing residues according at the given index with the given sequence (this is useful for Modeller)</dd>
+<dt> -mol2&#160;</dt>
+<dd> output MOL2 format</dd>
+<dt> -cleanaux&#160;</dt>
+<dd> reset AUX1 column to 1.0 and AUX2 column to 0.0   </dd>
+<dt> -removeclashes&#160;</dt>
+<dd> removes atoms with clashes from PDB</dd></dl>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<p><tt><FONT COLOR=#702050>convpdb.pl -out charmm19 1vii.orig.pdb
+</font></tt><br>
+converts the input PDB file (from the PDB databank) to a format 
+suitable for the CHARMM19 force field.
+<br>
+</p>
+<pre>ATOM      1  N   MET    41       1.177 -10.035  -3.493  1.00  0.00          
+ATOM      2  CA  MET    41       0.292  -8.839  -3.377  1.00  0.00          
+ATOM      3  C   MET    41      -0.488  -8.912  -2.063  1.00  0.00          
+ATOM      4  O   MET    41      -1.039  -9.937  -1.709  1.00  0.00          
+ATOM      5  CB  MET    41      -0.674  -8.793  -4.565  1.00  0.00          
+ATOM      6  CG  MET    41      -0.091  -7.889  -5.657  1.00  0.00          
+ATOM      7  SD  MET    41      -0.153  -8.747  -7.255  1.00  0.00          
+ATOM      8  CE  MET    41      -0.971  -7.432  -8.193  1.00  0.00          
+ATOM      9 1H   MET    41       0.835 -10.784  -2.856  1.00  0.00          
+ATOM     10 2H   MET    41       1.166 -10.381  -4.475  1.00  0.00          
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -renumber 1 -out charmm22noh -segnames  1vii.orig.pdb
+</font></tt><br>
+converts the input PDB file (from the PDB databank) to a format
+suitable for CHARMM22. Hydrogen atoms are not included in the output
+and residues are renumbered to start at 1. Segment ID are generated
+and included in the output.
+<br>
+</p>
+<pre>ATOM      1  N   MET     1       1.177 -10.035  -3.493  1.00  0.00      PRO0
+ATOM      2  CA  MET     1       0.292  -8.839  -3.377  1.00  0.00      PRO0
+ATOM      3  C   MET     1      -0.488  -8.912  -2.063  1.00  0.00      PRO0
+ATOM      4  O   MET     1      -1.039  -9.937  -1.709  1.00  0.00      PRO0
+ATOM      5  CB  MET     1      -0.674  -8.793  -4.565  1.00  0.00      PRO0
+ATOM      6  CG  MET     1      -0.091  -7.889  -5.657  1.00  0.00      PRO0
+ATOM      7  SD  MET     1      -0.153  -8.747  -7.255  1.00  0.00      PRO0
+ATOM      8  CE  MET     1      -0.971  -7.432  -8.193  1.00  0.00      PRO0
+ATOM     20  N   LEU     2      -0.523  -7.832  -1.331  1.00  0.00      PRO0
+ATOM     21  CA  LEU     2      -1.241  -7.824  -0.028  1.00  0.00      PRO0
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -sel 10:21 1vii.exp.pdb
+</font></tt><br>
+copies only residues 10 through 21 from the input PDB file to
+the output. 
+<br>
+</p>
+<pre>ATOM    141  N   VAL    10      -1.787  -4.543   8.123  1.00  0.00          
+ATOM    142  CA  VAL    10      -0.514  -3.998   7.587  1.00  0.00          
+ATOM    143  C   VAL    10      -0.582  -2.467   7.545  1.00  0.00          
+ATOM    144  O   VAL    10      -0.049  -1.793   8.404  1.00  0.00          
+ATOM    145  CB  VAL    10      -0.291  -4.552   6.183  1.00  0.00          
+ATOM    146  CG1 VAL    10       0.935  -3.888   5.559  1.00  0.00          
+ATOM    147  CG2 VAL    10      -0.064  -6.066   6.275  1.00  0.00          
+ATOM    148  H   VAL    10      -2.636  -4.140   7.863  1.00  0.00          
+ATOM    149  HA  VAL    10       0.303  -4.301   8.225  1.00  0.00          
+ATOM    150  HB  VAL    10      -1.160  -4.352   5.575  1.00  0.00          
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -match 1vii.shift.pdb 1vii.exp.pdb
+</font></tt><br>
+matches the residue numbering of the input file with
+the numbering in <FONT COLOR=#508060>1vii.shift.pdb</FONT> after aligning
+both sequences.
+<br>
+</p>
+<pre>ATOM      1  N   MET     6       1.177 -10.035  -3.493  1.00  0.00          
+ATOM      2  CA  MET     6       0.292  -8.839  -3.377  1.00  0.00          
+ATOM      3  C   MET     6      -0.488  -8.912  -2.063  1.00  0.00          
+ATOM      4  O   MET     6      -1.039  -9.937  -1.709  1.00  0.00          
+ATOM      5  CB  MET     6      -0.674  -8.793  -4.565  1.00  0.00          
+ATOM      6  CG  MET     6      -0.091  -7.889  -5.657  1.00  0.00          
+ATOM      7  SD  MET     6      -0.153  -8.747  -7.255  1.00  0.00          
+ATOM      8  CE  MET     6      -0.971  -7.432  -8.193  1.00  0.00          
+ATOM      9 1H   MET     6       0.835 -10.784  -2.856  1.00  0.00          
+ATOM     10 2H   MET     6       1.166 -10.381  -4.475  1.00  0.00          
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -merge 1vii.exp.pdb 1vii.sel10:21.pdb
+</font></tt><br>
+merges the fragment in <FONT COLOR=#508060>1vii.sel10:21.pdb</FONT> with the structure in <FONT COLOR=#508060>1vii.exp.pdb</FONT>.
+<br>
+</p>
+<pre>ATOM      1  N   MET     1       1.177 -10.035  -3.493  1.00  0.00      PRO0
+ATOM      2  CA  MET     1       0.292  -8.839  -3.377  1.00  0.00      PRO0
+ATOM      3  C   MET     1      -0.488  -8.912  -2.063  1.00  0.00      PRO0
+ATOM      4  O   MET     1      -1.039  -9.937  -1.709  1.00  0.00      PRO0
+ATOM      5  CB  MET     1      -0.674  -8.793  -4.565  1.00  0.00      PRO0
+ATOM      6  CG  MET     1      -0.091  -7.889  -5.657  1.00  0.00      PRO0
+ATOM      7  SD  MET     1      -0.153  -8.747  -7.255  1.00  0.00      PRO0
+ATOM      8  CE  MET     1      -0.971  -7.432  -8.193  1.00  0.00      PRO0
+ATOM      9 1H   MET     1       0.835 -10.784  -2.856  1.00  0.00      PRO0
+ATOM     10 2H   MET     1       1.166 -10.381  -4.475  1.00  0.00      PRO0
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -sel 1:5=10:21 -setchain B -segnames 1vii.exp.pdb 
+</font></tt><br>
+extracts residues 1 through 5 and 10 through 21 from the input file. The chain ID
+is set to <FONT COLOR=#508060>B</FONT> and CHARMM segment names are generated in the output.
+<br>
+</p>
+<pre>ATOM      1  N   MET B   1       1.177 -10.035  -3.493  1.00  0.00      PR01
+ATOM      2  CA  MET B   1       0.292  -8.839  -3.377  1.00  0.00      PR01
+ATOM      3  C   MET B   1      -0.488  -8.912  -2.063  1.00  0.00      PR01
+ATOM      4  O   MET B   1      -1.039  -9.937  -1.709  1.00  0.00      PR01
+ATOM      5  CB  MET B   1      -0.674  -8.793  -4.565  1.00  0.00      PR01
+ATOM      6  CG  MET B   1      -0.091  -7.889  -5.657  1.00  0.00      PR01
+ATOM      7  SD  MET B   1      -0.153  -8.747  -7.255  1.00  0.00      PR01
+ATOM      8  CE  MET B   1      -0.971  -7.432  -8.193  1.00  0.00      PR01
+ATOM      9 1H   MET B   1       0.835 -10.784  -2.856  1.00  0.00      PR01
+ATOM     10 2H   MET B   1       1.166 -10.381  -4.475  1.00  0.00      PR01
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -selseq AFANLPL 1vii.exp.pdb
+</font></tt><br>
+extracts residues 17 through 23 corresponding to the sequence AFANLPL from the input file.
+<br>
+</p>
+<pre>ATOM    250  N   ALA    17      -6.563   3.127  -1.620  1.00  0.000         
+ATOM    251  CA  ALA    17      -6.531   4.418  -0.879  1.00  0.000         
+ATOM    252  C   ALA    17      -5.098   4.662  -0.409  1.00  0.000         
+ATOM    253  O   ALA    17      -4.613   5.776  -0.400  1.00  0.000         
+ATOM    254  CB  ALA    17      -7.464   4.346   0.332  1.00  0.000         
+ATOM    255  H   ALA    17      -7.104   2.381  -1.285  1.00  0.000         
+ATOM    256  HA  ALA    17      -6.842   5.221  -1.532  1.00  0.000         
+ATOM    257 1HB  ALA    17      -7.940   3.377   0.364  1.00  0.000         
+ATOM    258 2HB  ALA    17      -6.892   4.496   1.236  1.00  0.000         
+ATOM    259 3HB  ALA    17      -8.218   5.115   0.254  1.00  0.000         
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>convpdb.pl -rotate 1 0 0 0 1 0 0 0 1 1vii.exp.pdb
+</font></tt><br>
+rotates the molecule around the x-axis by 180 degrees through this relation:
+</p><p>Rx (phi) = [[ 1      0          0     ],[ 0   cos(phi)   sin(phi) ],[ 0  -sin(phi)   cos(phi) ]]
+<br>
+</p>
+<pre>ATOM      1  N   MET     1       1.177 -10.035  -3.493  1.00  0.00          
+ATOM      2  CA  MET     1       0.292  -8.839  -3.377  1.00  0.00          
+ATOM      3  C   MET     1      -0.488  -8.912  -2.063  1.00  0.00          
+ATOM      4  O   MET     1      -1.039  -9.937  -1.709  1.00  0.00          
+ATOM      5  CB  MET     1      -0.674  -8.793  -4.565  1.00  0.00          
+ATOM      6  CG  MET     1      -0.091  -7.889  -5.657  1.00  0.00          
+ATOM      7  SD  MET     1      -0.153  -8.747  -7.255  1.00  0.00          
+ATOM      8  CE  MET     1      -0.971  -7.432  -8.193  1.00  0.00          
+ATOM      9 1H   MET     1       0.835 -10.784  -2.856  1.00  0.00          
+ATOM     10 2H   MET     1       1.166 -10.381  -4.475  1.00  0.00          
+
+...</pre>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.074 seconds
+Real time usage: 0.565 seconds
+Preprocessor visited node count: 55/1000000
+Preprocessor generated node count: 214/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=convpdb.pl&amp;oldid=114659">http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=convpdb.pl&amp;oldid=114659</a>"</div>
+					<div id='catlinks' class='catlinks catlinks-allhidden'></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="editarea">
+				<div id="p-cactions" class="portlet" role="navigation">
+			<!--<h3>Views</h3>-->
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/mmtsb/convpdb.pl" title="View the content page [c]" accesskey="c">Documentation</a></li>
+				<li id="ca-talk" class="new"><a href="/mwiki-mmtsb/index.php?title=Talk:convpdb.pl&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Comments</a></li>
+				<li id="ca-viewsource"><a href="/mwiki-mmtsb/index.php?title=convpdb.pl&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/mwiki-mmtsb/index.php?title=convpdb.pl&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+			</div>
+
+		<div class="visualClear"></div>
+		
+	      <TABLE CLASS="footer" CELLSPACING=4 WIDTH=100%>
+              <TR><TD CLASS="groups">
+              <A HREF="http://brooks.chem.lsa.umich.edu">&nbsp;Brooks group</A><BR>
+              <A HREF="http://feig.bch.msu.edu">&nbsp;Feig group</A>
+	      </TD>
+	      <TD CLASS="pageinfo">
+	        <ul>
+
+<!--
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="//www.mediawiki.org/"><img src="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mwiki-mmtsb/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>
+							</div>
+		</div>		-->
+                </ul>
+		</TD>
+		</TR></TABLE>
+
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":2067});
+}</script></body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>lsqfit.pl - MMTSB</title>
+<meta name="generator" content="MediaWiki 1.25.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/mwiki-mmtsb/opensearch_desc.php" title="MMTSB (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://feig.bch.msu.edu/mwiki-mmtsb/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/mmtsb/lsqfit.pl" />
+<link rel="alternate" type="application/atom+xml" title="MMTSB Atom feed" href="/mwiki-mmtsb/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.mmtsb.styles&amp;only=styles&amp;skin=mmtsb&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mmtsbwiki:resourceloader:filter:minify-css:7:186aa9ed34970b96f0dd1fdd2e763115 */</style>
+<script src="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=mmtsb&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"lsqfit.pl","wgTitle":"lsqfit.pl","wgCurRevisionId":114326,"wgRevisionId":114326,"wgArticleId":1362,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"lsqfit.pl","wgRelevantArticleId":1362,"wgIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: mmtsbwiki:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-lsqfit_pl skin-mmtsb action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+			        <TABLE CLASS="header" CELLPADDING=4 WIDTH=100%><TR><TD VALIGN=top>
+				<a href="http://mmtsb.chem.lsa.umich.edu"><img src="/mwiki-mmtsb/skins/MMTSB/mmtsblogo-blue.gif" alt="MMTSB" /></a>
+				</TD>
+				<TD>
+				<TABLE CELLPADDING=2 CLASS="header">
+				<TR><TD CLASS="toolsettitle" WIDTH=100% ALIGN=right>
+				  Tool Set Documentation
+		    	        </TD></TR>
+				<TR><TD CLASS="searcharea" WIDTH=100% ALIGN=right>
+						<div id="p-search" class="portlet" role="search">
+			<!--<h3><label for="searchInput">Search</label></h3>-->
+
+			<div id="searchBody" class="pBody">
+				<form action="/mwiki-mmtsb/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search MMTSB [f]" accesskey="f" id="searchInput" />
+<!--					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />-->
+				</form>
+
+							</div>
+		</div>
+					</TD></TR></TABLE>	
+				</TD></TR></TABLE>	
+
+				<div id="navarea">
+   						<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<!--<h3>Navigation</h3>-->
+		<div class='pBody'>
+							<ul>
+											<li id="n-Main"><a href="/mmtsb/Main_Page">Main</a></li>
+											<li id="n-MMTSB-Research-Resource"><a href="http://www.mmtsb.org" rel="nofollow">MMTSB Research Resource</a></li>
+											<li id="n-Forum"><a href="http://www.charmm.org/ubbthreads/postlist.php?Cat=0&amp;Board=MMTSB" rel="nofollow">Forum</a></li>
+											<li id="n-Workshops"><a href="http://www.mmtsb.org/workshops.html" rel="nofollow">Workshops</a></li>
+											<li id="n-Download"><a href="http://www.mmtsb.org/cgi-bin/download?toolset" rel="nofollow">download</a></li>
+											<li id="n-Installation"><a href="/mmtsb/Installation">Installation</a></li>
+									</ul>
+					</div>
+		</div>
+					</div>
+   		                                      <div id="content">
+				
+				<a id="top"></a>
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">lsqfit.pl</h1>
+
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From MMTSB</div>
+					<div id="contentSub"></div>
+					<!--					-->
+					<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<pre>usage:   lsqfit.pl [options] refPDB cmpPDB
+options: [-l min:max[=...]]
+         [-x min:max[=...]]
+         [-sel cab|ca|cb|p|heavy]
+         [-nowarn]
+         [-resnumonly] [-useseg]
+         [-s min:max[=...] min:max[=...]]
+         [-align fasta]
+         [-mem]
+         [-showmatrix]
+</pre><A HREF="http://feig.bch.msu.edu/cgi-bin/mmtsb-source?lsqfit.pl" TARGET=_new>Show source</A>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<p>This script performs least square fits of a structure with respect
+to a reference. Both structures, the reference first, are expected
+as command line arguments. The fitted structure is written to
+standard output in PDB format.<br />
+</p><p>The fit can be restricted to an inclusive subset of residues with
+<b>-l</b> or exclusive to all residues outside the specified set
+with <b>-x</b>. Note, the -l and -x options appear to work with the syntax of the <a href="/mmtsb/Selection" title="Selection" class="mw-redirect">Selection</a> commands, and thus complex selections can be used to superpose via least-squares fit different atoms in differing chains. By default C-alpha and C-beta atoms are used for
+the fit. Other atoms can be chosen with <b>-sel</b>. Possible
+choices are <font color="#508060">ca</font>, <font color="#508060">cb</font>, <font color="#508060">cab</font>,
+and <font color="#508060">heavy</font>.<br />
+</p><p>By default, atoms in both structures are matched by atom name,
+residue name, and residue number. If the option <b>-resnumonly</b>
+is given only atom name and residue number are used. This is necessary
+when fitting structures with different sequences based on the backbone
+atoms.<br />
+</p><p>The option <b>-nowarn</b> is available for suppressing warnings about
+missing atoms.
+</p>
+<h2><span class="mw-headline" id="Options">Options</span></h2>
+<dl><dt> -help&#160;</dt>
+<dd> usage information</dd>
+<dt> -l min&#58;max[=...]&#160;</dt>
+<dd> fit using only atoms in given residue range</dd>
+<dt> -x min&#58;max[=...]&#160;</dt>
+<dd> fit using atoms that are not in given residue range</dd>
+<dt> -sel cab|ca|cb|p|heavy...&#160;</dt>
+<dd> specify which atoms are used for fitting</dd>
+<dt> -nowarn&#160;</dt>
+<dd> do not print warnings about missing or mismatched atoms</dd>
+<dt> -resnumonly&#160;</dt>
+<dd> match residues by residue number only instead of residue name and number</dd>
+<dt> -s min&#58;max[=...] min&#58;max[=...]&#160;</dt>
+<dd> fit different parts of a given structure separately to the given reference</dd>
+<dt> -align fasta&#160;</dt>
+<dd> provide sequence alignment to fit two structures with different sequences</dd></dl>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<p><tt><FONT COLOR=#702050>lsqfit.pl 1vii.exp.pdb 1vii.exp.min.pdb
+</font></tt><br>
+performs a least squares fit of <FONT COLOR=#508060>1vii.exp.min.pdb</FONT> with respect
+to the reference structure in <FONT COLOR=#508060>1vii.exp.pdb</FONT>.
+<br>
+</p>
+<pre>ATOM      1  HT1 MET     1       3.095 -10.784  -1.764  1.00  0.00      PRO0
+ATOM      2  HT2 MET     1       3.675  -9.380  -1.095  1.00  0.00      PRO0
+ATOM      3  N   MET     1       3.271  -9.786  -1.958  1.00  0.00      PRO0
+ATOM      4  HT3 MET     1       3.992  -9.706  -2.688  1.00  0.00      PRO0
+ATOM      5  CA  MET     1       2.034  -9.103  -2.277  1.00  0.00      PRO0
+ATOM      6  CB  MET     1       1.412  -9.597  -3.593  1.00  0.00      PRO0
+ATOM      7  CG  MET     1       2.178  -9.233  -4.861  1.00  0.00      PRO0
+ATOM      8  SD  MET     1       1.401  -9.893  -6.359  1.00  0.00      PRO0
+ATOM      9  CE  MET     1       0.297  -8.563  -6.743  1.00  0.00      PRO0
+ATOM     10  C   MET     1       1.064  -9.364  -1.134  1.00  0.00      PRO0
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>lsqfit.pl -l 10:21 1vii.exp.pdb 1vii.rebuilt.10:21.pdb
+</font></tt><br>
+perform a least squares fit of residues 10 through 21 in <FONT COLOR=#508060>1vii.rebuilt.10:21.pdb</FONT>
+with respect to the reference structure <FONT COLOR=#508060>1vii.exp.pdb</FONT>
+<br>
+</p>
+<pre>ATOM      1  N   MET     1       2.161  -9.498  -1.381  1.00  0.00          
+ATOM      2  CA  MET     1       1.212  -8.350  -1.288  1.00  0.00          
+ATOM      3  C   MET     1       0.403  -8.465   0.005  1.00  0.00          
+ATOM      4  O   MET     1      -0.103  -9.518   0.344  1.00  0.00          
+ATOM      5  CB  MET     1       0.277  -8.353  -2.501  1.00  0.00          
+ATOM      6  CG  MET     1       0.840  -7.419  -3.578  1.00  0.00          
+ATOM      7  SD  MET     1       0.865  -8.278  -5.177  1.00  0.00          
+ATOM      8  CE  MET     1       0.004  -7.006  -6.137  1.00  0.00          
+ATOM      9  N   LEU     2       0.292  -7.389   0.735  1.00  0.00          
+ATOM     10  CA  LEU     2      -0.459  -7.420   2.019  1.00  0.00          
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>lsqfit.pl -sel ca -x 10:21 1vii.exp.pdb 1vii.exp.min.pdb
+</font></tt><br>
+perform a least squares fit of all residues except for 10 through 21 in 
+<FONT COLOR=#508060>1vii.min.pdb</FONT> with respect to the reference structure 
+<FONT COLOR=#508060>1vii.exp.pdb</FONT>. Only C-alpha atoms are used for the fit.
+<br>
+</p>
+<pre>ATOM      1  HT1 MET     1       2.778 -10.861  -1.943  1.00  0.00      PRO0
+ATOM      2  HT2 MET     1       3.373  -9.462  -1.278  1.00  0.00      PRO0
+ATOM      3  N   MET     1       2.938  -9.859  -2.130  1.00  0.00      PRO0
+ATOM      4  HT3 MET     1       3.628  -9.763  -2.886  1.00  0.00      PRO0
+ATOM      5  CA  MET     1       1.684  -9.182  -2.388  1.00  0.00      PRO0
+ATOM      6  CB  MET     1       1.013  -9.662  -3.684  1.00  0.00      PRO0
+ATOM      7  CG  MET     1       1.724  -9.273  -4.977  1.00  0.00      PRO0
+ATOM      8  SD  MET     1       0.892  -9.917  -6.452  1.00  0.00      PRO0
+ATOM      9  CE  MET     1      -0.237  -8.591  -6.772  1.00  0.00      PRO0
+ATOM     10  C   MET     1       0.763  -9.468  -1.211  1.00  0.00      PRO0
+
+...</pre>
+<p><br />
+<tt><FONT COLOR=#702050>lsqfit.pl -sel ca -resnumonly 1poa.exp.pdb 1vii.exp.pdb
+</font></tt><br>
+perform a least squares fit of C-alpha backbone atoms of all residues
+in <FONT COLOR=#508060>1vii.exp.pdb</FONT> with respect to the backbone atoms in the
+reference structure <FONT COLOR=#508060>1poa.exp.pdb</FONT>. Since the option 
+<FONT COLOR=#508060>-resnumonly</FONT> is given, it does not matter that both structures
+have completely different amino acid sequences.
+<br>
+</p>
+<pre>ATOM      1  N   MET     1      22.014  91.744  10.128  1.00  0.00      PRO0
+ATOM      2  CA  MET     1      23.347  91.475   9.514  1.00  0.00      PRO0
+ATOM      3  C   MET     1      23.200  90.399   8.436  1.00  0.00      PRO0
+ATOM      4  O   MET     1      22.565  89.381   8.639  1.00  0.00      PRO0
+ATOM      5  CB  MET     1      24.331  91.013  10.593  1.00  0.00      PRO0
+ATOM      6  CG  MET     1      25.135  92.217  11.095  1.00  0.00      PRO0
+ATOM      7  SD  MET     1      25.110  92.252  12.910  1.00  0.00      PRO0
+ATOM      8  CE  MET     1      26.897  92.396  13.163  1.00  0.00      PRO0
+ATOM      9 1H   MET     1      21.376  90.943   9.940  1.00  0.00      PRO0
+ATOM     10 2H   MET     1      22.125  91.867  11.156  1.00  0.00      PRO0
+
+...</pre>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.047 seconds
+Real time usage: 0.454 seconds
+Preprocessor visited node count: 40/1000000
+Preprocessor generated node count: 128/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=lsqfit.pl&amp;oldid=114326">http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=lsqfit.pl&amp;oldid=114326</a>"</div>
+					<div id='catlinks' class='catlinks catlinks-allhidden'></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="editarea">
+				<div id="p-cactions" class="portlet" role="navigation">
+			<!--<h3>Views</h3>-->
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/mmtsb/lsqfit.pl" title="View the content page [c]" accesskey="c">Documentation</a></li>
+				<li id="ca-talk" class="new"><a href="/mwiki-mmtsb/index.php?title=Talk:lsqfit.pl&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Comments</a></li>
+				<li id="ca-viewsource"><a href="/mwiki-mmtsb/index.php?title=lsqfit.pl&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/mwiki-mmtsb/index.php?title=lsqfit.pl&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+			</div>
+
+		<div class="visualClear"></div>
+		
+	      <TABLE CLASS="footer" CELLSPACING=4 WIDTH=100%>
+              <TR><TD CLASS="groups">
+              <A HREF="http://brooks.chem.lsa.umich.edu">&nbsp;Brooks group</A><BR>
+              <A HREF="http://feig.bch.msu.edu">&nbsp;Feig group</A>
+	      </TD>
+	      <TD CLASS="pageinfo">
+	        <ul>
+
+<!--
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="//www.mediawiki.org/"><img src="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mwiki-mmtsb/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>
+							</div>
+		</div>		-->
+                </ul>
+		</TD>
+		</TR></TABLE>
+
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":1966});
+}</script></body></html>

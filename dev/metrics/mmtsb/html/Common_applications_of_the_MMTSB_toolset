@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Common applications of the MMTSB toolset - MMTSB</title>
+<meta name="generator" content="MediaWiki 1.25.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/mwiki-mmtsb/opensearch_desc.php" title="MMTSB (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://feig.bch.msu.edu/mwiki-mmtsb/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/mmtsb/Common_applications_of_the_MMTSB_toolset" />
+<link rel="alternate" type="application/atom+xml" title="MMTSB Atom feed" href="/mwiki-mmtsb/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.mmtsb.styles&amp;only=styles&amp;skin=mmtsb&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/mwiki-mmtsb/skins/MMTSB/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: mmtsbwiki:resourceloader:filter:minify-css:7:186aa9ed34970b96f0dd1fdd2e763115 */</style>
+<script src="http://feig.bch.msu.edu/mwiki-mmtsb/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=mmtsb&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Common_applications_of_the_MMTSB_toolset","wgTitle":"Common applications of the MMTSB toolset","wgCurRevisionId":114641,"wgRevisionId":114641,"wgArticleId":1456,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Common_applications_of_the_MMTSB_toolset","wgRelevantArticleId":1456,"wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: mmtsbwiki:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Common_applications_of_the_MMTSB_toolset skin-mmtsb action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+			        <TABLE CLASS="header" CELLPADDING=4 WIDTH=100%><TR><TD VALIGN=top>
+				<a href="http://mmtsb.chem.lsa.umich.edu"><img src="/mwiki-mmtsb/skins/MMTSB/mmtsblogo-blue.gif" alt="MMTSB" /></a>
+				</TD>
+				<TD>
+				<TABLE CELLPADDING=2 CLASS="header">
+				<TR><TD CLASS="toolsettitle" WIDTH=100% ALIGN=right>
+				  Tool Set Documentation
+		    	        </TD></TR>
+				<TR><TD CLASS="searcharea" WIDTH=100% ALIGN=right>
+						<div id="p-search" class="portlet" role="search">
+			<!--<h3><label for="searchInput">Search</label></h3>-->
+
+			<div id="searchBody" class="pBody">
+				<form action="/mwiki-mmtsb/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search MMTSB [f]" accesskey="f" id="searchInput" />
+<!--					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />-->
+				</form>
+
+							</div>
+		</div>
+					</TD></TR></TABLE>	
+				</TD></TR></TABLE>	
+
+				<div id="navarea">
+   						<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<!--<h3>Navigation</h3>-->
+		<div class='pBody'>
+							<ul>
+											<li id="n-Main"><a href="/mmtsb/Main_Page">Main</a></li>
+											<li id="n-MMTSB-Research-Resource"><a href="http://www.mmtsb.org" rel="nofollow">MMTSB Research Resource</a></li>
+											<li id="n-Forum"><a href="http://www.charmm.org/ubbthreads/postlist.php?Cat=0&amp;Board=MMTSB" rel="nofollow">Forum</a></li>
+											<li id="n-Workshops"><a href="http://www.mmtsb.org/workshops.html" rel="nofollow">Workshops</a></li>
+											<li id="n-Download"><a href="http://www.mmtsb.org/cgi-bin/download?toolset" rel="nofollow">download</a></li>
+											<li id="n-Installation"><a href="/mmtsb/Installation">Installation</a></li>
+									</ul>
+					</div>
+		</div>
+					</div>
+   		                                      <div id="content">
+				
+				<a id="top"></a>
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Common applications of the MMTSB toolset</h1>
+
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From MMTSB</div>
+					<div id="contentSub"></div>
+					<!--					-->
+					<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Running_and_analyzing_protein_simulations_.28from_PDBfile_to_CHARMM_trajectory.29:"><span class="tocnumber">1</span> <span class="toctext">Running and analyzing protein simulations (from PDBfile to CHARMM trajectory):</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Running_and_analyzing_protein-RNA_complex_simulations_.28from_PDBfile_to_CHARMM_trajectory.29:"><span class="tocnumber">2</span> <span class="toctext">Running and analyzing protein-RNA complex simulations (from PDBfile to CHARMM trajectory):</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Running_and_analyzing_protein_simulations_with_replica-exchange:"><span class="tocnumber">3</span> <span class="toctext">Running and analyzing protein simulations with replica-exchange:</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Generating_and_visualizing_the_electrostatic_surface_potential_of_a_macromolecule:"><span class="tocnumber">4</span> <span class="toctext">Generating and visualizing the electrostatic surface potential of a macromolecule:</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Patching_residues:"><span class="tocnumber">5</span> <span class="toctext">Patching residues:</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#For_more_examples:"><span class="tocnumber">6</span> <span class="toctext">For more examples:</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Running_and_analyzing_protein_simulations_.28from_PDBfile_to_CHARMM_trajectory.29:">Running and analyzing protein simulations (from PDBfile to CHARMM trajectory):</span></h2>
+<p>This example illustrates step-by-step how to perform explicit solvent molecular dynamics of a protein solvated in a cubic box of water at 0.15 mM ionic NaCl concentration using the MMTSB toolset.  The set of files and scripts provided below can be easily adapted  to perform dynamics of any other protein of interest with different solvent box shapes and sizes. Here, we use RNAase peptide as an example.
+</p><p>Step-by-step instructions are as follows:
+</p><p>1. Download RNAse A crystal structure, <a rel="nofollow" class="external text" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1RNU">1RNU.pdb</a> from the Protein DataBank.
+</p><p>2. Extract first 13 residues using convpdb.pl, centered and with segnames and in charmm22 format:
+</p>
+<pre>   convpdb.pl -center -sel 1:13 -segnames -out charmm22 -nohetero 1RNU.pdb &gt; 1rnu_cpep.pdb
+</pre>
+<p>3. Visualize peptide fragment with VMD to make sure its what you want.
+</p><p>4. Minimize
+</p>
+<pre>   minCHARMM.pl -par minsteps=0,sdsteps=100,sdstepsz=0.02 \
+     -par trunc=switch,dielec=rdie,cutnb=12,cuton=8,cutoff=11 \
+     -par param=22x,cmap\
+     -par xtop=top_all27_prot_na.rtf \
+     -par xpar=par_all27_prot_na.prm \
+     -par blocked,nter=none,cter=ct3 \
+     -cons heavy self 1:13_5 -log mmtsbmin.log \
+      1rnu_cpep.pdb &gt; 1rnu_cpep_mmtsbmin.pdb
+</pre>
+<p>5. Write protein structure file (PSF) for use in later steps involving: (1) viewing structures in VMD and (2) determining how many ions to add for making the charge  on the system neutral.
+</p>
+<pre>   genPSF.pl  -par param=22x,cmap\
+     -par xtop=top_all27_prot_na.rtf \
+     -par xpar=par_all27_prot_na.prm \
+     -par blocked,nter=none,cter=ct3 \
+      1rnu_cpep_mmtsbmin.pdb &gt; 1rnu_cpep_mmtsbmin.psf
+</pre>
+<p>In the following steps 6-8 of the tutorial, we will use the MMTSB tools to solvate our 
+minimized peptide. First we'll add solvent and ions to the system. Then we'll minimize the complete 
+system with harmonic restraints on the peptide. The system will then be ready for molecular dynamics runs.
+</p><p>6. Add solvent box 
+</p><p>First use convpdb.pl to solvate and add segment names - extract boxsize!
+</p>
+<pre>   convpdb.pl -out charmm22 -solvate -cubic -cutoff 8 1rnu_cpep_mmtsbmin.pdb | \
+     convpdb.pl -out charmm22 -segnames &gt; 1rnu_cpep_solv.pdb       
+</pre>
+<p>In this case, the boxsize is 38.743553 Å cube. Note down this number.
+</p><p>7. Add ions at 0.15 M concentration to the cubic box of water generated above
+</p><p>Counterions are added to solvated system by specifying the number of positive (SOD) 
+and/or negative ions (CLA). Determine how many and which type of ions we need to
+neutralize this system using the CHARMM script <a href="/mmtsb/ions_to_add.inp" title="ions to add.inp">ions_to_add.inp</a>.
+</p>
+<pre>   $CHARMMEXEC pdbfile=1rnu_cpep_mmtsbmin psffile=1rnu_cpep_mmtsbmin \
+     boxsize=38.74355 &lt;ions_to_add.inp&gt; ions_to_add.log &amp;
+</pre>
+<p>Note: Use PSF file of the protein only and NOT one with the solvent at this step.
+</p><p>Now grep information about the number of ions from the log file "ions_to_add.log"
+</p><p>Number of positive ions  (SOD) to add:
+</p>
+<pre>   grep "NPOS -&gt;"  ions_to_add.log | tail -1
+</pre>
+<p>Number of negative ions  (CLA) to add:
+</p>
+<pre>   grep "NNEG -&gt;"  ions_to_add.log | tail -1
+</pre>
+<p>Now finally add ions to the system with waterbox (in this case 5 SOD and 6 CLA ions):
+</p>
+<pre>   convpdb.pl -ions SOD:5=CLA:6 1rnu_cpep_solv.pdb &gt; 1rnu_cpep_solvions.pdb
+</pre>
+<p>Generate complete PSF of the system including waterbox and ions.
+</p>
+<pre>   genPSF.pl  -par param=22x,cmap,\
+     -par xtop=top_all27_prot_na.rtf \
+     -par xpar=par_all27_prot_na.prm \
+     -par blocked,nter=none,cter=ct3 \
+      1rnu_cpep_solvions.pdb&gt;1rnu_cpep_solvions.psf
+</pre>
+<p>8. Now minimize with restraints and SHAKE constraints using PME electrostatics
+</p>
+<pre>   minCHARMM.pl -par minsteps=0,sdsteps=500,sdstepsz=0.02 \ 
+     -par trunc=switch,cutnb=12,cuton=8,cutoff=11 \ 
+     -par param=22x,cmap\ 
+     -par xtop=top_all27_prot_na.rtf \ 
+     -par xpar=par_all27_prot_na.prm \ 
+     -par blocked,nter=none,cter=ct3 \ 
+     -par shake,boxsize=38.743553,nblisttype=bycb \ 
+     -cons heavy self 1:13_5 \ 
+     -cmd mmtsbminsolvate.inp -log mmtsbminsolvate.log \ 
+      1rnu_cpep_solvions.pdb &gt; 1rnu_cpep_solvions_min.pdb
+</pre>
+<p>9. Run dynamics on this peptide in water using the mmtsb tool mdCHARMM.pl.
+</p><p>In this section we will take the configuration we just generated and run 2 ps of 
+molecular dynamics on this system:
+</p>
+<pre>   mdCHARMM.pl  -par dynsteps=1000,dynens=NPT,dynitemp=298,dyneqfrq=1000 \
+     -par dynnose=1,dynoutfrq=10,dynpress=1,echeck=20000 \ 
+     -par trunc=switch,cutnb=12,cuton=8,cutoff=11 \
+     -par param=22x,cmap \
+     -par xtop=top_all27_prot_na.rtf \ 
+     -par xpar=par_all27_prot_na.prm \
+     -par blocked,nter=none,cter=ct3 \
+     -par shake,boxsize=38.743553,nblisttype=bycb \
+     -cmd mmtsbdynsolvate.inp -log mmtsbdynsolvate.log \
+     -enerout 1rnu_cpep_d0.ene -trajout 1rnu_cpep_d0.dcd \
+     -restout 1rnu_cpep_d0.res -final 1rnu_cpep_d0.pdb \
+      1rnu_cpep_solvions_min.pdb
+</pre>
+<p>10. Restart dynamics from previous step and perform production dynamics using NVT ensemble:
+</p>
+<pre>   mdCHARMM.pl  -par dynsteps=1000,dyntemp=298,\ 
+     -restart 1rnu_cpep_d0.res -final - 1rnu_cpep_solvions_min.pdb \
+     -par trunc=switch,cutnb=12,cuton=8,cutoff=11 \
+     -par param=22x,cmap\
+     -par xtop=top_all27_prot_na.rtf \
+     -par xpar=par_all27_prot_na.prm \
+     -par blocked,nter=none,cter=ct3 \
+     -par shake,boxsize=38.743553,nblisttype=bycb \
+     -cmd mmtsbdynsolvate1.inp -log mmtsbdynsolvate1.log \
+     -enerout 1rnu_cpep_d1.ene -trajout 1rnu_cpep_d1.dcd \
+     -restout 1rnu_cpep_d1.res
+</pre>
+<p>11. Visualize the dynamics trajectory.
+</p><p>After running the dynamics, visualize the trajectory with vmd. To look at molecular dynamics trajectories with vmd, you need to read in a pdb and a dcd file. The following command will 
+accomplish this.
+</p>
+<pre>   vmd 1rnu_cpep_solvions_min.pdb 1rnu_cpep_d1.dcd
+</pre>
+<p>12. Analyze the trajectory
+</p><p>Process  dcd trajectory to extract root mean square deviation of the peptide CA atoms with respect to the reference PDB after least-squares superposition and plot it as a function of time.
+</p>
+<pre>   analyzeCHARMM.pl -rms -sel CA -comp 1rnu_cpep_solvmin.pdb -psf \
+     1rnu_cpep_solvmin.psf 1rnu_cpep_d1.dcd &gt;rms.out &amp; 
+</pre>
+<p>Visualize data using Gnuplot software.
+</p>
+<pre>   gnuplot
+   pl ‘rms.out’ u 2:3 w lp
+</pre>
+<p>13. For further analysis of the trajectory, see the <a rel="nofollow" class="external text" href="http://www.mmtsb.org/workshops/mmtsb-ctbp_2006/Tutorials/TrajAnalysis_Tutorial/TrajAnalysis_Tutorial.html">MMTSB Tool Set - Trajectory Analysis tutorial</a>.
+<br />
+</p>
+<h2><span class="mw-headline" id="Running_and_analyzing_protein-RNA_complex_simulations_.28from_PDBfile_to_CHARMM_trajectory.29:">Running and analyzing protein-RNA complex simulations (from PDBfile to CHARMM trajectory):</span></h2>
+<p>MMTSB RNA-PROTEIN modeling
+</p><p>The objective of this tutorial is to become familiar with the MMTSB Tool Set and learn how to prepare a system for modeling tasks starting with a file from the Protein Data Bank. The goal is to prepare a solvated system of a protein-RNA complex that can be used as the input for simulation studies and then perform minimization followed by a short molecular dynamics simulation.
+</p><p>In this tutorial the double-stranded RNA-binding protein Xlrbpa from Xenopus laevis is used as an example. A crystal structure for the protein-RNA complex is available from the Protein Data Bank with the PDB code <a rel="nofollow" class="external text" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1DI2">1DI2</a>. More information about the crystal structure is available from this paper.
+</p><p>The system consists of two RNA-binding domains (chain A and B), four chains of RNA (C, D, E, G), and the oxygen positions of 359 crystallographic water molecules. The RNA in the biological complex is obtained by using the symmetry copy of chain E instead of chain G. The first RNA strand consists of chain E followed by chain C, the second RNA strand of chain D followed by the symmetry copy of chain E. According to the PDB entry, the crystal structure was solved for a mutated protein (N112M).
+</p><p>1. Obtain/copy the PDB file <a rel="nofollow" class="external text" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1DI2">1DI2</a> from the Protein Data Bank to the current working directory.
+</p><p>2. Extract the protein chains A and B
+</p>
+<pre>   convpdb.pl -chain A 1DI2.pdb &gt; 1di2.proteinA.pdb
+   convpdb.pl -chain B 1DI2.pdb &gt; 1di2.proteinB.pdb
+</pre>
+<p>3. Reverse the N112M mutation to obtain the biological sequence with mutate.pl. Because the mutation script does not handle chain IDs well, the chain ID of the input structure is first removed (set to blank) and later reset to A or B respectively. Note, how multiple commands can be combined through pipes so that the output from one command is used as input for the next command.
+</p>
+<pre>   convpdb.pl -setchain " " 1di2.proteinA.pdb | mutate.pl -seq 112:N  | \ 
+     convpdb.pl -setchain A &gt; 1di2.proteinA.mutated.pdb
+   convpdb.pl -setchain " " 1di2.proteinB.pdb | mutate.pl -seq 112:N  | \ 
+     convpdb.pl -setchain B &gt; 1di2.proteinB.mutated.pdb
+</pre>
+<p>4. Combine the two protein chains into a single PDB file containing both chains.
+</p>
+<pre>   convpdb.pl -merge 1di2.proteinB.mutated.pdb 1di2.proteinA.mutated.pdb &gt; \
+     1di2.protein.pdb
+</pre>
+<p>5. Extract the nucleic acid chains C, D, and E
+</p>
+<pre>   convpdb.pl -chain C 1DI2.pdb &gt; 1di2.rnaC.pdb
+   convpdb.pl -chain D 1DI2.pdb &gt; 1di2.rnaD.pdb
+   convpdb.pl -chain E 1DI2.pdb &gt; 1di2.rnaE.pdb
+</pre>
+<p>6. Generate the symmetry copy of chain E. The rotation matrix is available from the header of the PDB file (see the second matrix under 'REMARK 350 APPLY THE FOLLOWING TO CHAINS: E').
+</p>
+<pre>   convpdb.pl  -rotate -1 0 0 0 1 0 0 0 -1 1di2.rnaE.pdb &gt; 1di2.rnaE.sc.pdb
+</pre>
+<p>7. Generate the first RNA strand from chain E followed by chain C. This requires renumbering of the chains from the original PDB.
+</p>
+<pre>   convpdb.pl -setchain C -renumber 1 1di2.rnaE.pdb &gt; \
+     1di2.rna.strand1.part1.pdb
+   convpdb.pl -renumber 11 1di2.rnaC.pdb &gt; 1di2.rna.strand1.part2.pdb
+</pre>
+<p>Merge the two parts into a single file:
+</p>
+<pre>   convpdb.pl -merge 1di2.rna.strand1.part2.pdb \
+     1di2.rna.strand1.part1.pdb &gt; 1di2.rna.strand1.pdb
+</pre>
+<p>Repeat to generate strand 2 from chain D followed by the symmetry copy of chain E.
+Merge the two strands into a single file:
+</p>
+<pre>   convpdb.pl -merge 1di2.rna.strand2.pdb 1di2.rna.strand1.pdb &gt; \
+     1di2.rna.pdb
+</pre>
+<p>8. If you took a closer look at the resulting RNA duplex you might have noticed that the two strands appear to be broken in the middle. This is an artifact of how the crystal structure was obtained. The strand breaks can be "repaired" with a very short minimization in CHARMM because CHARMM can automatically add missing atoms. The following command carries out only 10 steps of steepest descent minimization. The 'nodeoxy' flag is needed to tell CHARMM that we are working with RNA instead of DNA.
+</p>
+<pre>   minCHARMM.pl -par nodeoxy,minsteps=0,sdsteps=10 1di2.rna.pdb &gt; \
+     1di2.rna.fixed.pdb
+</pre>
+<p>Take a look at the resulting structure. The strand breaks should be gone. Also, the structure now has all of the hydrogens compared to the PDB structure where hydrogens are missing because they are difficult to resolve experimentally.
+</p><p>9. We are now ready to combine the protein and RNA into a single file:
+</p>
+<pre>   convpdb.pl -merge 1di2.rna.fixed.pdb 1di2.protein.pdb &gt; 1di2.complex.pdb
+</pre>
+<p>Generate PSF for later use.
+</p>
+<pre>   genPSF.pl -par param=22x,cmap,\
+     -par xtop=top_all27_prot_na.rtf \
+     -par xpar=par_all27_prot_na.prm \
+     -par nodeoxy \
+      1di2.complex.pdb&gt;1di2.complex.psf
+</pre>
+<p>10. Next, we will add solvent to the complex. The crystal structure already contains a number of water molecules. We will keep those and then add additional waters around to fill a simulation box.
+</p><p>First, we extract the waters from the PDB file and add missing hydrogens. It is convenient to keep the X-ray waters in a separate chain (chain X):
+</p>
+<pre>   convpdb.pl -nsel water 1DI2.pdb | complete.pl | convpdb.pl \ 
+     -setchain X &gt; 1di2.xray.waters.pdb
+</pre>
+<p>The X-ray waters are combined with the complex ...
+</p>
+<pre>   convpdb.pl -merge 1di2.xray.waters.pdb 1di2.complex.pdb &gt; \
+     1di2.complex.waters.pdb
+</pre>
+<p>... and then solvated in a cubic box with at least 9 A between the complex or any of the X-ray waters to the edge of the box:
+</p>
+<pre>   convpdb.pl -solvate -cutoff 8 -cubic 1di2.complex.waters.pdb &gt; \
+     1di2.complex.solvated.pdb 
+</pre>
+<p>11. As a last step we need to add counterions to neutralize the system. The charge of the protein-DNA complex can be obtained from CHARMM with the following command. Again, the 'nodeoxy' option is used because the complex contains RNA instead of DNA.
+</p>
+<pre>   enerCHARMM.pl -par nodeoxy -charge 1di2.complex.pdb
+</pre>
+<p>Counterions are added to solvated system by specifying the number of positive (SOD) and/or negative ions (CLA). Decide how many and which type of ions we need to neutralize this system from the output of the previous command and then run the following command:
+</p>
+<pre>   convpdb.pl -ions &lt;type&gt;:&lt;num&gt; 1di2.complex.solvated.pdb &gt; 1di2.complex.solvions.pdb
+</pre>
+<p>To determine the number of ions to add at 0.15 M concentration to the cubic box of water use this CHARMM script <a href="/mmtsb/ions_to_add.inp" title="ions to add.inp">ions_to_add.inp</a>.
+</p>
+<pre>   $CHARMMEXEC pdbfile=1di2.complex psffile=1di2.complex \
+     boxsize=86.2 &lt;ions_to_add.inp&gt; ions_to_add.log &amp;
+</pre>
+<p>Note: Use PSF file of the protein only and NOT one with the solvent at this step.
+</p><p>Now grep information about the number of ions from the log file "ions_to_add.log"
+</p><p>Number of positive ions  (SOD) to add:
+</p>
+<pre>   grep "NPOS -&gt;"  ions_to_add.log | tail -1
+</pre>
+<p>Number of negative ions  (CLA) to add:
+</p>
+<pre>   grep "NNEG -&gt;"  ions_to_add.log | tail -1
+</pre>
+<p>Now finally add ions to the system with waterbox (in this case 73 SOD and 43 CLA ions):
+</p>
+<pre>   convpdb.pl -ions SOD:73=CLA:43 1di2.complex.solvated.pdb &gt; 1di2.complex.solvions.pdb
+</pre>
+<p>You can check whether the resulting system is neutral with:
+</p>
+<pre>   enerCHARMM.pl -par nodeoxy -charge 1di2.complex.solvions.pdb
+</pre>
+<p>Finally, we should have a fully solvated system that is ready as a starting point for simulations.
+</p><p>12. Now minimize with SHAKE constraints using PME electrostatics
+</p>
+<pre>   minCHARMM.pl -par minsteps=0,sdsteps=500,sdstepsz=0.02\  
+    -par trunc=switch,cutnb=12,cuton=8,cutoff=11 \
+    -par param=22x,cmap \
+    -par xtop=top_all27_prot_na.rtf \
+    -par xpar=par_all27_prot_na.prm \
+    -par nodeoxy \
+    -par shake,boxsize=86.2,nblisttype=bycb \
+    -cmd mmtsbdynsolvate.inp -log mmtsbdynsolvate.log \
+     1di2.complex.solvions.pdb
+</pre>
+<p>13. Run dynamics on this RNA-protein complex in water using the mmtsb tool mdCHARMM.pl.
+</p>
+<pre>   mdCHARMM.pl -par dynsteps=1000,dynens=NPT,dynitemp=298,dyneqfrq=1000 \
+    -par dynnose=1,dynoutfrq=10,dynpress=1,echeck=20000 \
+    -par trunc=switch,cutnb=12,cuton=8,cutoff=11 \
+    -par param=22x,cmap \
+    -par xtop=top_all27_prot_na.rtf \
+    -par xpar=par_all27_prot_na.prm \
+    -par nodeoxy \
+    -par shake,boxsize=86.2,nblisttype=bycb \
+    -cmd mmtsbdynsolvate.inp -log mmtsbdynsolvate.log \
+    -enerout 1di2.complex.solvions_d0.ene \
+    -trajout 1di2.complex.solvions_d0.dcd \
+    -restout 1di2.complex.solvions_d0.res -final 1di2.complex.solvions_d0.pdb \
+     1di2.complex.solvions.pdb
+</pre>
+<h2><span class="mw-headline" id="Running_and_analyzing_protein_simulations_with_replica-exchange:">Running and analyzing protein simulations with replica-exchange:</span></h2>
+<p>First we prepare a protein of 16 residues as an extended structure using Charmm. We will then use this protein as the input pdb file for replica exchange simulations in GBSW implicit solvent model. The replica exchange simulation performs molecular dynamics at 4 different temperatures simultaneously using 4 different processors. 
+</p><p><b>1) Running Replica Exchange simulations</b>
+</p><p>The script to prepare the extended structure of the protein is called <a href="/mmtsb/protein.inp" title="protein.inp">protein.inp</a>
+</p><p>Run the following command to obtain the protein configurations (pept.pdb and helix.pdb) to be used in replica exchange simulations
+</p>
+<pre>$CHARMMEXEC &lt; protein.inp &gt; protein.out
+</pre>
+<p>Next we use the following perl script from MMTSB toolset to run the replica exchange simulations at 4 different temperature windows using the GBSW implicit solvent model.
+Note&#160;: The last line of the command shows that 4 replica will be run at different temperatures between 300 and 400 K.
+</p>
+<pre>aarex.pl -n 250 -charmmlog clog \
+        -par archive,natpdb=helix.pdb -dir gbrex \
+        -mdpar cmap,blocked,nter=ACE,cter=CT3 \
+        -mdpar gb=gbsw,gbswsgamma=0.04,gbswtmemb=28.0,gbswmsw=2.5 \
+        -mdpar cutnb=20.0,cutoff=16.0,cuton=16.0,scalerad=nina,dynsteps=500 \
+        -temp 4:300:400 pept.pdb
+</pre>
+<p>Note that the machine in which you are running should have atleast 4 processors or you could run the simulation in a cluster by requesting 4 processors.
+</p><p><b>2) Analysis of Replica exchange results</b>
+</p><p>The tool rexinfo.pl can provide various output related to the progress of the replica exchange simulation 
+</p><p>The command to look at the energy and temperature profiles of each replica
+</p>
+<pre>rexinfo.pl -byclient aa1 -dir gbrex
+</pre>
+<p>"Client" means replica here, and for all-atom replica exchange simulations, the replicas are named aa1 through aaN. 
+</p><p>Another way to query the replica exchange output is to look at which clients are at the lowest temperature at each cycle
+</p>
+<pre>rexinfo.pl -bytemp 300
+</pre>
+<p>If the archive parameter was specified during the replica exchange run, all of the conformations are stored in a single file (prod.coor.archive). They can be accessed with readArchive.pl. An example of how to use this tool is given in the following:
+</p>
+<pre>readArchive.pl -inx 100 -xtract -pdb aa1/final.pdb aa1/prod.coor.archive
+</pre>
+<p>Since readArchive.pl operates on single archive files, it cannot easily analyze properties as a function of temperature instead of replica. A different, more general tool, rexanalysis.pl, is available for that purpose. For example the following command can be used to calculate the radius of gyration for the conformations - from different replicas - that are found at T=300K during the first 200 cycles.
+</p>
+<pre>rexanalysis.pl -inx 1:200 -bytemp 300 -apply rgyr.pl
+</pre>
+<p>For a more thorough description, see the <a rel="nofollow" class="external text" href="http://www.mmtsb.org/workshops/mmtsb-ctbp_2006/Tutorials/REX_GBMembFold_Tutorial/REX_Analysis.html">MMTSB Tool Set - Analysis of replica exchange simulations</a>.
+<br /><br />
+</p>
+<h2><span class="mw-headline" id="Generating_and_visualizing_the_electrostatic_surface_potential_of_a_macromolecule:">Generating and visualizing the electrostatic surface potential of a macromolecule:</span></h2>
+<p>First, we select the protein from a PDB file <a rel="nofollow" class="external text" href="http://www.pdb.org/pdb/explore/explore.do?structureId=1ENH">(1enh.pdb)</a>, add hydrogen atoms, and center the molecule at the origin. Then, we calculate the electrostatic potential on a grid and generate the molecular surface of the protein. Finally, we view the molecule in VMD, projecting the electrostatic potential onto the molecular surface.
+</p>
+<pre>   convpdb.pl -nsel protein 1ENH.pdb  |  complete.pl  |  convpdb.pl -center &gt; 1enh.center.pdb
+   pbCHARMM.pl -emap phi.dx 1enh.center.pdb
+   pbCHARMM.pl -dx -grid epsx grid.dx 1enh.center.pdb
+   vmd 1enh.center.pdb phi.dx grid.dx
+</pre>
+<p>In vmd, select:
+</p>
+<pre>   Graphics/Representations/Drawing Method [Surf]
+   Graphics/Representations/Coloring Method [Volume]
+</pre>
+<p>For a more thorough description, see the <a rel="nofollow" class="external text" href="http://www.mmtsb.org/workshops/mmtsb-ctbp_2006/Tutorials/MMTSB_PBCalculations/MMTSBPBCalculations.html">MMTSB Tool Set - Continuum electrostatics calculations tutorial</a>.
+<br /><br /><br />
+</p>
+<h2><span class="mw-headline" id="Patching_residues:">Patching residues:</span></h2>
+<p>Situations may arise where standard residues need to be modified in a simulation. Standard patches are provided in the CHARMM files for creating disulfide bonds (DISU), protonating an aspartate residue (ASPP) or deprotonating a or blocking chain termini residues.
+These residues can be patched automatically in any of the MMTSB tools that take [-par <a rel="nofollow" class="external text" href="http://feig.bch.msu.edu/mmtsb/CHARMM_Parameters">CHARMMparams</a>] or [-mdpar <a rel="nofollow" class="external text" href="http://feig.bch.msu.edu/mmtsb/CHARMM_Parameters">CHARMMparams</a>] options. The general format for a single patch is:
+</p>
+<pre> -par PATCH=&lt;patchname&gt;:&lt;segid&gt;.&lt;resid&gt;
+</pre>
+<p>The general format for a disulfide bond is:
+</p>
+<pre> -par PATCH=DISU:&lt;segid1&gt;.&lt;resid1&gt;:&lt;segid2&gt;.&lt;resid2&gt;
+</pre>
+<p>Multiple patches must be separated by "_", for example:
+</p>
+<pre> -par PATCH=&lt;patchname1&gt;:&lt;segid1&gt;.&lt;resid1&gt;_&lt;patchname2&gt;:&lt;segid2&gt;.&lt;resid2&gt;_&lt;patchname3&gt;:&lt;segid3&gt;.&lt;resid3&gt;
+</pre>
+<p>Here's an example of how residue patching might be used in a project. Starting from a PDB file <a rel="nofollow" class="external text" href="http://www.pdb.org/pdb/explore/explore.do?structureId=1BG8">1BG8</a>, we convert it into CHARMM27 format, complete with added hydrogen atoms and blocked termini:
+</p>
+<pre> convpdb.pl -chain A -segnames 1BG8.pdb &gt; 1BG8_a.pdb
+ convpdb.pl -chain B 1BG8.pdb &gt; 1BG8_b.pdb
+ convpdb.pl -out charmm27 -nohetero -segnames \
+     -merge 1BG8_b.pdb 1BG8_a.pdb | \
+     complete.pl -blocked -param 27 &gt; 1BG8_dimer.pdb
+</pre>
+<p>Now, we can use the -par options in many of the MMTSB commands which will add appropriate patches to different sites prior to calculating the energy, running the dynamics etc.<br />Note that because the chain termini were blocked using the -blocked option above and the coordinates for the corresponding atoms are in the 1GB8_dimer.pdb file, we treat the blocked termini slightly differently than the other patches.
+</p>
+<pre>   minCHARMM.pl -par minsteps=50 -log charmm_min.log -cmd charmm_min.inp \
+     -par blocked,nter=ace,cter=ct3 \
+     -par patch=ASPP:PROA.20_ASPP:PROA.25_GLUP:PROA.19_ASPP:PROB.43 \
+     1BG8_dimer.pdb &gt; 1BG8_dimer_min.pdb
+</pre>
+<p>or running molecular dynamics:
+</p>
+<pre>   mdCHARMM.pl -par dynsteps=50 -log charmm_md.log -cmd charmm_md.inp \
+     -par blocked,nter=ace,cter=ct3 \
+     -par patch=ASPP:PROA.20_ASPP:PROA.25_GLUP:PROA.19_ASPP:PROB.43 \
+      1BG8_dimer_min.pdb &gt; 1BG8_dimer_md.pdb
+</pre>
+<p>These same -par patch options can be used in energy calculations with <a href="/mmtsb/enerCHARMM.pl" title="enerCHARMM.pl">enerCHARMM.pl</a>, for running Constant-pH simulations with replica-exchange simulations via <a href="/mmtsb/aarex.pl" title="aarex.pl">aarex.pl</a>, etc.<br />
+Note: for MMTSB commands which use -mdpar options (like <a href="/mmtsb/aarex.pl" title="aarex.pl">aarex.pl</a>) instead of -par options, the syntax of the patch option is identical. 
+<br />
+See <a rel="nofollow" class="external text" href="http://feig.bch.msu.edu/mmtsb/CHARMM_Parameters">CHARMMparams</a> for more information.
+<br /><br />
+The patches that are currently available (top_all27_prot_na.rtf) are:
+</p>
+<pre> PRES NTER  &#160;! standard N-terminus
+ PRES GLYP  &#160;! Glycine N-terminus
+ PRES PROP  &#160;! Proline N-Terminal
+ PRES ACE   &#160;! acetylated N-terminus
+ PRES ACED  &#160;! acetylated N-terminus (to create dipeptide)
+ PRES ACP   &#160;! acetylated N-terminus
+ PRES ACPD  &#160;! acetylated N-terminus (for proline dipeptide)
+ PRES NNEU  &#160;! neutral N-terminus; charges from LSN
+ PRES CTER  &#160;! standard C-terminus
+ PRES CT1   &#160;! methylated C-terminus from methyl acetate
+ PRES CT2   &#160;! amidated C-terminus
+ PRES CT3   &#160;! N-Methylamide C-terminus
+ PRES CNEU  &#160;! neutral C-terminus; charges from ASPP
+ PRES ASPP  &#160;! patch for protonated aspartic acid, proton on od2
+ PRES GLUP  &#160;! patch for protonated glutamic acid, proton on oe2
+ PRES LSN   &#160;! patch for neutral lysine based on methylamine
+ PRES LINK  &#160;! linkage for IMAGES or for joining segments
+ PRES DISU  &#160;! patch for disulfides. Patch must be 1-CYS and 2-CYS.
+ PRES HS2   &#160;! Patch for neutral His, move proton from ND1 to NE2
+ PRES LIG1  &#160;! linkage for cyclic peptide
+ PRES LIG2  &#160;! linkage for cyclic peptide
+ PRES LIG3  &#160;! linkage for cyclic peptide
+ PRES DEO1  &#160;! Patch to make DEOXYribose in PYRIMIDINES
+ PRES DEO2  &#160;! Patch to make DEOXYribose in PURINES
+ PRES 5TER  &#160;! 5'-terminal HYDROXYL patch, from MeOH
+ PRES 5MET  &#160;! 5'-ribose METHYL patch
+ PRES 5PHO  &#160;! 5'terminal PHOSPHATE patch
+ PRES 5POM  &#160;! 5'terminal Methyl-Phosphate patch
+ PRES 3TER  &#160;! 3'terminal HYDROXYL patch, from MeOH
+ PRES 3PHO  &#160;! 3'terminal PHOSPHATE patch
+ PRES 3POM  &#160;! 3'terminal Methyl Phosphate patch
+ PRES 3PO3  &#160;! 3'terminal PHOSPHATE patch
+ PRES DELB  &#160;! patch to delete all possible base atoms
+ PRES CY35  &#160;! patch to make a cyclic 3'-5' nucleotide
+ PRES LKNA  &#160;! Patch to join to nucleic acid segments (eg for IMAGES)
+</pre>
+<h2><span class="mw-headline" id="For_more_examples:">For more examples:</span></h2>
+<p>Download and follow  <a rel="nofollow" class="external text" href="http://www.mmtsb.org/workshops/mmtsb-ctbp_2006/Tutorials/WorkshopTutorials_2006.html">tutorials</a>  that were prepared for past MMTSB workshops.
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.075 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 22/1000000
+Preprocessor generated node count: 28/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+
+<!-- Saved in parser cache with key mmtsbwiki:pcache:idhash:1456-0!*!0!!en!*!* and timestamp 20180923091549 and revision id 114641
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=Common_applications_of_the_MMTSB_toolset&amp;oldid=114641">http://feig.bch.msu.edu/mwiki-mmtsb/index.php?title=Common_applications_of_the_MMTSB_toolset&amp;oldid=114641</a>"</div>
+					<div id='catlinks' class='catlinks catlinks-allhidden'></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="editarea">
+				<div id="p-cactions" class="portlet" role="navigation">
+			<!--<h3>Views</h3>-->
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/mmtsb/Common_applications_of_the_MMTSB_toolset" title="View the content page [c]" accesskey="c">Documentation</a></li>
+				<li id="ca-talk" class="new"><a href="/mwiki-mmtsb/index.php?title=Talk:Common_applications_of_the_MMTSB_toolset&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Comments</a></li>
+				<li id="ca-viewsource"><a href="/mwiki-mmtsb/index.php?title=Common_applications_of_the_MMTSB_toolset&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/mwiki-mmtsb/index.php?title=Common_applications_of_the_MMTSB_toolset&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+			</div>
+
+		<div class="visualClear"></div>
+		
+	      <TABLE CLASS="footer" CELLSPACING=4 WIDTH=100%>
+              <TR><TD CLASS="groups">
+              <A HREF="http://brooks.chem.lsa.umich.edu">&nbsp;Brooks group</A><BR>
+              <A HREF="http://feig.bch.msu.edu">&nbsp;Feig group</A>
+	      </TD>
+	      <TD CLASS="pageinfo">
+	        <ul>
+
+<!--
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="//www.mediawiki.org/"><img src="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mwiki-mmtsb/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mwiki-mmtsb/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>
+							</div>
+		</div>		-->
+                </ul>
+		</TD>
+		</TR></TABLE>
+
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":1397});
+}</script></body></html>
