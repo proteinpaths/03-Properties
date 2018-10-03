@@ -9,12 +9,12 @@ import subprocess
 ###############################################################################
 # Function to be called by a external program
 ###############################################################################
-def eval (pdbFilename, workingDir="./"):
-	output = subprocess.Popen (["hbplus", pdbFilename], cwd=workingDir, stdout=subprocess.PIPE).communicate()[0]
-	outputLines = output.split("\n")
+def eval (pdbFilename, workingDir=r"/dev/shm/tmp"):
+	out, err = subprocess.Popen (["hbplus", pdbFilename], cwd=workingDir, stderr=subprocess.PIPE, stdout=subprocess.PIPE).communicate()
+	outputLines = out.split("\n")
 
 	strValue = outputLines[-2].split ()[0]
-        value = float (strValue)
+	value = float (strValue)
 
 	return (value)
 
@@ -36,12 +36,16 @@ def log (message):
 #-------------------------------------------------------------
 if __name__ == "__main__":
 
+	workingDir = ""
 	if len (sys.argv) < 2: 
 		print USAGE
 		sys.exit (0)
+	elif len (sys.argv) == 3:
+		workingDir  = sys.argv[2]
+	else:
+		workingDir = os.getcwd ()
 
 	pdbFilename = sys.argv[1]
-	outputDir = os.getcwd ()
 
-	print (eval (pdbFilename, outputDir))
+	print (eval (pdbFilename, workingDir))
 

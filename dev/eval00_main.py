@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+"LOG: updated oct 02/2018"
+
 import os, sys
 import tarfile       # For extractTrajectory function
 import subprocess    # For runProgram function
@@ -9,7 +11,11 @@ from multiprocessing import Pool # For MultiProcessing Class For Multiprocessing
 Evaluate diferent metrics (as scripts) to a single pathway or
 a directory of pathways
 """
-USAGE = "eval01_main.py <-f|-d> <single pathway|dir of pathways> [output dir] [nCpus]"
+USAGE = "eval01_main.py <-f|-d> <single pathway|dir of pathways> <output dir> <nCpus>"
+TMPDIR    = os.environ ["EVAL_TMPDIR"]
+LOGFILE   = os.environ ["EVAL_LOGFILE"]
+ERRFILE   = os.environ ["EVAL_ERRFILE"]
+
 #-----------------------------------------------------------
 #-----------------------------------------------------------
 def main (args):
@@ -37,7 +43,7 @@ def evalSinglePathway_Start (args):
 
 def evalSinglePathway (fullPathwayName, outputDir, nCpus=1):
 	print ">>> Evaluating properties on %s ..." % fullPathwayName
-	headersOutputFile = "PDB NC CO RG HB AS RM LR RC RA DF SS" 
+	headersOutputFile = "PDB NC CO RG HB SP SN RM LR SC SA RD RC RS" 
 
 	#tmpDir, refPdbFullpath = extractTrajectoryFromTgz (fullPathwayName, outputDir)
 	tmpDir, refPdbFullpath, inputFiles = extractTrajectoryFromDir (fullPathwayName, outputDir)
@@ -71,7 +77,7 @@ def evalSinglePdbFile (pdbFileFullpath, refPdbFullpath):
 	valuesList.append (executeCommand (cmm))
 	cmm = "radius_gyration %s" % pdbFileFullpath
 	valuesList.append (executeCommand (cmm))
-	cmm = "hydrogen_bonds %s" % pdbFileFullpath
+	cmm = "hydrogen_bonds %s %s" % (pdbFileFullpath, TMPDIR)
 	valuesList.append (executeCommand (cmm))
 	cmm = "sasa_polar %s" % pdbFileFullpath
 	valuesList.append (executeCommand (cmm))
@@ -133,12 +139,8 @@ def extractTrajectoryFromDir (fullPathwayName, outputDir):
 
 	# There are only 2 files in dir: native and pdbs
 	files = os.listdir (fullPathwayName)
-	if os.path.isdir (files[0]):
-		pdbsDir = files [0]
-		nativeProtein = files [1]
-	else:
-		nativeProtein = files [0]
-		pdbsDir = files [1]
+	files.sort()
+	nativeProtein = files.pop()
 
 	# Make links of pdbs in a temporal Dir
 	pathPDBsFull = "%s/%s/" % (fullPathwayName, pdbsDir)
@@ -152,7 +154,6 @@ def extractTrajectoryFromDir (fullPathwayName, outputDir):
 
 	refPdbFullpath = "%s/%s" % (fullPathwayName, nativeProtein )
 
-	inputFiles.sort()
 	return tmpDir, refPdbFullpath, inputFiles
 #-----------------------------------------------------------
 # Extract the conformations (Pdbs) of the trajectory and
@@ -175,11 +176,10 @@ def extractTrajectoryFromTgz (fullPathwayName, outputDir):
 # call a external programm that returns a value running on "workingDir"
 #------------------------------------------------------------
 def executeCommand (cmm, workingDir="./"):
-	print ">>>", cmm,
+	print ">>> %s" % cmm
 	#try:
-	print ">>>>"
 	value = subprocess.Popen (cmm.split (), cwd=workingDir, stdout=subprocess.PIPE).communicate()[0]
-	print ">>>>", value,
+	print ">>>>", value
 	return value.strip()
 	#except:
 	#	log(["runProgram Error:"] + cmm.split())
@@ -214,25 +214,10 @@ def checkExistingDir (dir):
 def extractName (fullName):
 	return os.path.splitext (os.path.basename (fullName))[0]
 
-#-------------------------------------------------------------
-# Define the  output for errors and log messages
-#-------------------------------------------------------------
-def defineMessagesOutput ():
-	stderr = os.getenv ("EVAL_STDERR")
-	if stderr == None:
-		sys.stderr = sys.stdout
-	else:
-		sys.stderr = open (stderr, "a")
-
-
 #------------------------------------------------------------
 # MAIN
 #------------------------------------------------------------
 
 if __name__ == "__main__":
-	os.environ ["EVAL_STDERR"] = os.getcwd()+"/errors.log"
-	stderr = os.getenv ("EVAL_STDERR")
-	#sys.stderr = open (stderr, "w")
-
 	main (sys.argv)
 
