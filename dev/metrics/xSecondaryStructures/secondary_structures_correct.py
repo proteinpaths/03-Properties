@@ -48,11 +48,11 @@ if __name__ == "__main__":
 		print USAGE
 		sys.exit (0)
 
-	pdbTarget = sys.argv[1]
-	pdbReference = sys.argv[2]
+	pdbReference = sys.argv[1]
+	pdbTarget = sys.argv[2]
 
 	outputDir = os.getcwd ()
 
-	value = float ( runProgram (["secondary_structures", "-correct", pdbTarget, pdbReference], outputDir).strip())
+	value = float ( runProgram (["secondary_structures", "-correct", pdbReference, pdbTarget], outputDir).strip())
 	print value
 

@@ -1,1 +1,0 @@
-/home/ppath/03-Properties/dev/metrics/xRadiusGyration/radius_gyration.py

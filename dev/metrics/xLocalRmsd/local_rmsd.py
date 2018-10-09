@@ -12,36 +12,37 @@ USAGE = "\
 GOAL:   Calculates the local RMSD of a reference PDB vs. query PDB (Average of SS).\n\
 INPUT:  Reference PDB and query PDB.\n\
 OUTPUT: Average RMSD of secondary structures. \n\
-USAGE:  local_rmsd.py <reference PDB> <query PDB> \n"
+USAGE:  local_rmsd.py <reference PDB> <query PDB> [workingDir] \n"
 
-TMPLABEL = "tmp_LR_%s_" % str (uuid.uuid4())
 
 #-------------------------------------------------------------
 # Main 
 #-------------------------------------------------------------
 def main (args):
-	global TMPLABEL
-	if len (args) != 3:
+	if len (args) < 3:
 		print USAGE
 		sys.exit (0)
+	elif len (args) == 4:
+		workingDir = args [3]
 	else:
-		referencePDB = args [1]
-		targetPDB    = args [2]
-		TMPLABEL    += extractName (referencePDB) + "_"
-		log ("%s, %s" % (targetPDB, referencePDB))
-		localRmsdValue = localRmsd (targetPDB, referencePDB)
-		print localRmsdValue
+		workingDir = "."
+
+	referencePDB = args [1]
+	targetPDB    = args [2]
+
+	localRmsdValue = localRmsd (referencePDB, targetPDB, workingDir)
+	print localRmsdValue
 
 #-------------------------------------------------------------
 # Calculate the local RMSD
 #-------------------------------------------------------------
-def localRmsd (targetPDB, refPDB):
-	matchPdb = matchResidueNumbering (targetPDB, refPDB)
-	refInfo = getAminoStructureInfo (refPDB)
+def localRmsd (refPDB, targetPDB, workingDir):
+	#matchPdb = matchResidueNumbering (targetPDB, refPDB)
+	refInfo = getAminoStructureInfo (refPDB, workingDir)
 	refStructures = getLocalStructures (refInfo["aminoStructure"], refInfo["startResidueNumber"])
-	localRmsdValue = calculateAverageRmsd (targetPDB, matchPdb, refStructures)
+	localRmsdValue = calculateAverageRmsd (refPDB, targetPDB, refStructures)
 
-	clean ([matchPdb])
+	#clean ([matchPdb])
 	return localRmsdValue
 
 
@@ -57,20 +58,23 @@ def rmsd (refPDB, targetPDB, start, end):
 ###############################################################################
 # Call external dssp 
 ###############################################################################
-def calculateDssp (PDB):
-	dsspName = TMPLABEL + extractName (PDB) + ".dssp"
-	cmm = "dssp %s %s &> /dev/null " % (PDB, dsspName)
-	log (cmm)
-	#params = ["dssp", PDB, dsspName]
-	value = runProgram (cmm, ".")
+def calculateDssp (pdbFilename, workingDir):
+	TMPLABEL = "tmp_LR_%s_" % str (uuid.uuid4())
+	TMPLABEL    += extractName (pdbFilename) + "_"
 
-	return dsspName
+	stemName = name (pdbFilename)
+	dsspFilename = TMPLABEL + stemName + ".dssp"
+	cmm = "dssp %s %s" % (pdbFilename, dsspFilename)
+	out,err = subprocess.Popen (cmm.split(), stderr=subprocess.PIPE, stdout=subprocess.PIPE, cwd=workingDir, ).communicate()
+
+	return dsspFilename
+
 ###############################################################################
 # Calculate the DSSP of "PDB" structure and get from it information:
 # sequence A+B, start residue number, end residue number and size of the sequence
 ###############################################################################
-def getAminoStructureInfo (PDB):
-	dsspName = calculateDssp (PDB)
+def getAminoStructureInfo (PDB, workingDir):
+	dsspName = calculateDssp (PDB, workingDir)
 	dsspFile = open (dsspName)
 	# Skips header lines until reach the values of aminos and structures and others
 	while "#" not in dsspFile.next():
@@ -154,7 +158,7 @@ def matchResidueNumbering (targetPDB, refPDB):
 ###############################################################################
 # 
 ###############################################################################
-def calculateAverageRmsd (matchPdb, refPdb, listOfStructures):
+def calculateAverageRmsd (refPdb, matchPdb, listOfStructures):
 	listOfRmsds =[]
 
 	sumRmsd = 0
@@ -175,6 +179,15 @@ def calculateAverageRmsd (matchPdb, refPdb, listOfStructures):
 		totalRmsd = sumRmsd / float (sumSizes)
 
 	return totalRmsd
+
+###############################################################################
+# Returns the stem BASENAME  of a relative or full name with some extension
+###############################################################################
+def name (namefile):
+	baseName = os.path.basename (namefile)
+	newNamefile = baseName.split(".") [0]
+
+	return newNamefile
 
 ###############################################################################
 # Remove temporal filenames used for calculations

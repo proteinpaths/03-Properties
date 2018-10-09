@@ -8,6 +8,7 @@ NOTES: Uses the DSSP program and processes its output
 	   This assumption as it was impossible to split the line by a pattern as there are many empty values
 """
 import os, sys
+import subprocess
 import uuid
 TMPLABEL = "tmp_%s_" % str (uuid.uuid4 ())
 ##################################################################
@@ -49,27 +50,13 @@ def log (message):
 ###############################################################################
 # call a external programm that returns a value running on "workingDir"
 ###############################################################################
-def runProgram (listOfParams, workingDir):
-	import subprocess
-	value = subprocess.Popen (listOfParams, cwd=workingDir, stdout=subprocess.PIPE).communicate()[0]
-	return value
-
-#strvalue = runProgram (["rms.pl", "-resnumonly", "-fit", "-out", "ca", pdbReference, pdbFilename], currentDir)
-############## CHECK ARGUMENTS ######################
-###############################################################################
-## 
-###############################################################################
-def runDSSP (pdbFilename, currentDir):
-	import os
+def calculateDssp (pdbFilename, workingDir):
 	stemName = name (pdbFilename)
 	dsspFilename = TMPLABEL + stemName + ".dssp"
-	log (["!!!!!!!!!!!!!", "runDSSP", pdbFilename, dsspFilename, currentDir])
-	strValue = runProgram (["dssp", pdbFilename, dsspFilename], currentDir)
-	#cmm = "dssp %s %s" % (pdbFilename, dsspFilename)
-	#os.system (cmm)
+	cmm = "dssp %s %s" % (pdbFilename, dsspFilename)
+	out,err = subprocess.Popen (cmm.split(), stderr=subprocess.PIPE, stdout=subprocess.PIPE, cwd=workingDir, ).communicate()
 
 	return dsspFilename
-
 
 ###############################################################################
 ## 
@@ -109,8 +96,8 @@ def processDSSP (dsspFilename):
 ## 
 ###############################################################################
 def getProportionAAinCorrectSS (referencePdbFilename, targetPdbFilename, workingDir):
-	referenceDsspFilename = runDSSP (referencePdbFilename, workingDir)
-	targetDsspFilename = runDSSP (targetPdbFilename, workingDir)
+	referenceDsspFilename = calculateDssp (referencePdbFilename, workingDir)
+	targetDsspFilename = calculateDssp (targetPdbFilename, workingDir)
 
 	refSeqAminos, refSeqStructures, refSeqAlphaBeta = processDSSP (referenceDsspFilename)
 	trgSeqAminos, trgSeqStructures, trgSeqAlphaBeta = processDSSP (targetDsspFilename)
@@ -123,7 +110,6 @@ def getProportionAAinCorrectSS (referencePdbFilename, targetPdbFilename, working
 	allSS =  [x for x in refSeqAlphaBeta if x != " "]
 	numberOfSS = len (allSS)
 
-	log ([numberOfCorrectSS, numberOfSS, len (refSeqAminos)])
 	proportionOfSS = numberOfCorrectSS / float (numberOfSS)
 
 	clean ([referenceDsspFilename, targetDsspFilename])
@@ -133,7 +119,7 @@ def getProportionAAinCorrectSS (referencePdbFilename, targetPdbFilename, working
 ## 
 ###############################################################################
 def getProportionAAinAnySS (targetPdbFilename, workingDir):
-	targetDsspFilename = runDSSP (targetPdbFilename, workingDir)
+	targetDsspFilename = calculateDssp (targetPdbFilename, workingDir)
 
 	trgSeqAminos, trgSeqStructures, trgSeqAlphaBeta = processDSSP (targetDsspFilename)
 
@@ -145,7 +131,6 @@ def getProportionAAinAnySS (targetPdbFilename, workingDir):
 	allSS =  [x for x in trgSeqAlphaBeta if x != " "]
 	numberOfSS = len (trgSeqAminos)
 
-	log ([numberOfAnySS, numberOfSS])
 	proportionOfSS = numberOfAnySS / float (numberOfSS)
 
 	clean ([targetDsspFilename])
@@ -162,14 +147,12 @@ if __name__ == "__main__":
 	proportion = -1
 	workingDir = os.getcwd ()
 	if sys.argv [1] == "-correct":
-		targetPdbFilename = sys.argv [2]
-		referencePdbFilename = sys.argv [3]
+		referencePdbFilename = sys.argv [2]
+		targetPdbFilename    = sys.argv [3]
 		proportion = getProportionAAinCorrectSS (referencePdbFilename, targetPdbFilename, workingDir)
-		log (["getProportionAAinCorrectSS", proportion, referencePdbFilename, targetPdbFilename, workingDir])
 	elif sys.argv [1] == "-any":
 		targetPdbFilename = sys.argv [2]
 		proportion = getProportionAAinAnySS (targetPdbFilename, workingDir)
-		log (["getProportionAAinAnySS", proportion, targetPdbFilename, workingDir])
 
 	print proportion
 

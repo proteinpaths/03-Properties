@@ -5,4 +5,4 @@ BEFORE INSTALL:
 AFTER-INSTALL:
 	- Export the environment var PROFLEX_HOME to "prog" dir of proflex dir
 	  For example:
-	  export export PROFLEX_HOME=/home/ppath/03-Properties/dev/src/proflex/proflex/prog
+	  export PROFLEX_HOME=/home/ppath/03-Properties/dev/src/proflex/proflex/prog

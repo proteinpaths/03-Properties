@@ -1,91 +1,16 @@
->>>> SecStr: !!!!!!!!!!!!! runDSSP p1.pdb tmp_51761223-0940-4c2a-9137-ca44c92f01a3_p1.dssp /home/ppath/03-Properties/dev/metrics/xSecondaryStructures 
- !!! Residue ASP    1 A has  5 instead of expected   4 sidechain atoms.
-     last sidechain atom name is  2HB
+>>>> SecStr: !!!!!!!!!!!!! runDSSP p0.pdb tmp_8fc40611-3e99-43d5-a939-660e691317f3_p0.dssp /home/lgarreta/cloud/proteinpaths/03-Properties/dev/metrics/xSecondaryStructures 
+ !!! Residue ARG  108 A has  8 instead of expected   7 sidechain atoms.
+     last sidechain atom name is  NH2
      calculated solvent accessibility includes extra atoms !!!
 
- !!! Residue ALA    2 A has  4 instead of expected   1 sidechain atoms.
-     last sidechain atom name is  3HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue TYR    3 A has  9 instead of expected   8 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue ALA    4 A has  4 instead of expected   1 sidechain atoms.
-     last sidechain atom name is  3HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue GLN    5 A has  7 instead of expected   5 sidechain atoms.
-     last sidechain atom name is  2HG
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue TRP    6 A has 11 instead of expected  10 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue LEU    7 A has  5 instead of expected   4 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue ALA    8 A has  4 instead of expected   1 sidechain atoms.
-     last sidechain atom name is  3HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue ASP    9 A has  5 instead of expected   4 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue GLY   10 A has  1 instead of expected   0 sidechain atoms.
-     last sidechain atom name is  2HA
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue GLY   11 A has  1 instead of expected   0 sidechain atoms.
-     last sidechain atom name is  2HA
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue PRO   12 A has  6 instead of expected   3 sidechain atoms.
-     last sidechain atom name is  2HD
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue SER   13 A has  3 instead of expected   2 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue SER   14 A has  3 instead of expected   2 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue GLY   15 A has  1 instead of expected   0 sidechain atoms.
-     last sidechain atom name is  2HA
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue ARG   16 A has 10 instead of expected   7 sidechain atoms.
-     last sidechain atom name is  2HD
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue PRO   17 A has  6 instead of expected   3 sidechain atoms.
-     last sidechain atom name is  2HD
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue PRO   18 A has  6 instead of expected   3 sidechain atoms.
-     last sidechain atom name is  2HD
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue PRO   19 A has  6 instead of expected   3 sidechain atoms.
-     last sidechain atom name is  2HD
-     calculated solvent accessibility includes extra atoms !!!
-
- !!! Residue SER   20 A has  4 instead of expected   2 sidechain atoms.
-     last sidechain atom name is  2HB
-     calculated solvent accessibility includes extra atoms !!!
-
- !!!           91 hydrogen or deuterium atoms were ignored
+ !!!          209 hydrogen or deuterium atoms were ignored
      in the calculation of side chain solvent 
      accessibility !!!
  !!! HEADER-card missing !!!
  !!! COMPOUND-card missing !!!
  !!! SOURCE-card missing !!!
  !!! AUTHOR-card missing !!!
->>>> SecStr: 14 20 
->>>> SecStr: getProportionAAinAnySS 0.7 p1.pdb /home/ppath/03-Properties/dev/metrics/xSecondaryStructures 
-0.7
+ !!! Contact between residues ILE   94 A and TRP   92 A  too close !!!
+>>>> SecStr: 53 108 
+>>>> SecStr: getProportionAAinAnySS 0.490740740741 p0.pdb /home/lgarreta/cloud/proteinpaths/03-Properties/dev/metrics/xSecondaryStructures 
+0.490740740741

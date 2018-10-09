@@ -43,7 +43,9 @@ def evalSinglePathway_Start (args):
 
 def evalSinglePathway (fullPathwayName, outputDir, nCpus=1):
 	print ">>> Evaluating properties on %s ..." % fullPathwayName
-	headersOutputFile = "PDB NC CO RG HB SP SN RM LR SC SA RD RC RS" 
+	#headersOutputFile  = "PDB NC CO RG HB SP SN RM LR SC SA RD RC RS" 
+	headersOutputFile  = "PDB NC CO RG HB SP RM LR SC SA SS RD" 
+	#headersOutputFile = "PDB NC CO RG HB AS RM LR RC RA DF SS"
 
 	#tmpDir, refPdbFullpath = extractTrajectoryFromTgz (fullPathwayName, outputDir)
 	tmpDir, refPdbFullpath, inputFiles = extractTrajectoryFromDir (fullPathwayName, outputDir)
@@ -81,8 +83,8 @@ def evalSinglePdbFile (pdbFileFullpath, refPdbFullpath):
 	valuesList.append (executeCommand (cmm))
 	cmm = "sasa_polar %s" % pdbFileFullpath
 	valuesList.append (executeCommand (cmm))
-	cmm = "sasa_nonpolar %s" % pdbFileFullpath
-	valuesList.append (executeCommand (cmm))
+	#cmm = "sasa_nonpolar %s" % pdbFileFullpath
+	#valuesList.append (executeCommand (cmm))
 	cmm = 'rmsd %s %s' % (refPdbFullpath, pdbFileFullpath)
 	valuesList.append (executeCommand (cmm))
 	cmm = 'local_rmsd %s %s' % (refPdbFullpath, pdbFileFullpath)
@@ -91,14 +93,16 @@ def evalSinglePdbFile (pdbFileFullpath, refPdbFullpath):
 	valuesList.append (executeCommand (cmm))
 	cmm = 'secondary_structures_any %s' % (pdbFileFullpath)
 	valuesList.append (executeCommand (cmm))
+	cmm = 'structural_similarity %s %s' % (refPdbFullpath, pdbFileFullpath, )
+	valuesList.append (executeCommand (cmm))
 	cmm = 'rigidity_degrees %s' % (pdbFileFullpath)
 	valuesList.append (executeCommand (cmm))
-	cmm = 'rigidity_clusters %s' % (pdbFileFullpath)
-	valuesList.append (executeCommand (cmm))
-	cmm = 'rigidity_stressed %s' % (pdbFileFullpath)
-	valuesList.append (executeCommand (cmm))
-	cmm = 'voids %s' % (pdbFileFullpath)
-	valuesList.append (executeCommand (cmm))
+	#cmm = 'rigidity_clusters %s' % (pdbFileFullpath)
+	#valuesList.append (executeCommand (cmm))
+	#cmm = 'rigidity_stressed %s' % (pdbFileFullpath)
+	#valuesList.append (executeCommand (cmm))
+	#cmm = 'voids %s' % (pdbFileFullpath)
+	#valuesList.append (executeCommand (cmm))
 
 	return "\t".join (valuesList)
 
@@ -137,17 +141,15 @@ def extractTrajectoryFromDir (fullPathwayName, outputDir):
 	# Create outputDir
 	checkExistingDir (tmpDir)
 
-	# There are only 2 files in dir: native and pdbs
-	files = os.listdir (fullPathwayName)
-	files.sort()
-	nativeProtein = files.pop()
-
 	# Make links of pdbs in a temporal Dir
-	pathPDBsFull = "%s/%s/" % (fullPathwayName, pdbsDir)
-	pdbFiles = os.listdir (pathPDBsFull)
+	# There are only 2 files in dir: native and pdbs
+	pdbFiles = os.listdir (fullPathwayName)
+	pdbFiles.sort()
+	nativeProtein = pdbFiles.pop()
+
 	inputFile = []
 	for pdb in pdbFiles:
-		source = "%s/%s" % (pathPDBsFull, pdb)
+		source = "%s/%s" % (fullPathwayName, pdb)
 		dest   = "%s/%s" % (tmpDir, pdb)
 		os.symlink (source, dest)
 		inputFiles.append (dest)
@@ -180,7 +182,8 @@ def executeCommand (cmm, workingDir="./"):
 	#try:
 	value = subprocess.Popen (cmm.split (), cwd=workingDir, stdout=subprocess.PIPE).communicate()[0]
 	print ">>>>", value
-	return value.strip()
+	formatedValue = "%1.4f" % float (value.strip()) 
+	return formatedValue
 	#except:
 	#	log(["runProgram Error:"] + cmm.split())
 

@@ -1,2 +1,0 @@
-Install Bio3D from R using:
-	install.packages("bio3d", dependencies=TRUE)

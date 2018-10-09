@@ -25,7 +25,7 @@ def eval (pdbFilename, tmpDir=""):
 	createDir (tmpDir)
 	logFilename = tmpDir + "/" + name (pdbFilenameFull) + "_analysis.log"
 
-	cmm = "proflex -nonf -h %s 2>&1 errors.log" % pdbFilenameFull
+	cmm = "proflex -nonf -h %s" % pdbFilenameFull
 	[err, out]=subprocess.Popen (cmm.split(), cwd=tmpDir, stdout=subprocess.PIPE,stderr=subprocess.PIPE).communicate()
 
 	if not os.path.exists (logFilename):

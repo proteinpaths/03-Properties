@@ -10,9 +10,10 @@ import os
 programLstLibs = []
 programLstLibs.append ("freesasa/bin/freesasa")
 programLstLibs.append ("hbplus/hbplus")
-programLstLibs.append ("proflex/bin/proflex")
+programLstLibs.append ("proflex/prog/first/bin/proflex")
 programLstLibs.append ("dssp/dssp")
 programLstLibs.append ("avp/avp")
+programLstLibs.append ("encoder/encoder")
 
 programLstUser = []
 programLstUser.append ("xHydrogenBonds/hydrogen_bonds.py")
@@ -32,6 +33,9 @@ programLstUser.append ("xNativeContacts/native_contacts.R")
 programLstUser.append ("xSecondaryStructures/secondary_structures.py")
 programLstUser.append ("xSecondaryStructures/secondary_structures_any.py")
 programLstUser.append ("xSecondaryStructures/secondary_structures_correct.py")
+
+programLstUser.append ("xStructuralSimilarity/structural_similarity.py")
+
 
 currentDir = os.getcwd()
 
