@@ -13,6 +13,7 @@ import subprocess
 # Function to be called by a external program
 ###############################################################################
 def eval (pdbFilename, tmpDir=""):
+	[degrees, clusters, stressed] = [-999999, -999999, -999999]
 	(path, filename) = os.path.split (pdbFilename)
 	if (path==""): 
 		pdbFilenameFull = "%s/%s" % (os.getcwd(), filename)

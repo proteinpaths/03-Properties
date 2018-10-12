@@ -140,19 +140,26 @@ def getProportionAAinAnySS (targetPdbFilename, workingDir):
 ##
 ###############################################################################
 if __name__ == "__main__": 
-	if len (sys.argv) < 3:
-		print USAGE
-		sys.exit (0)
-	
-	proportion = -1
-	workingDir = os.getcwd ()
-	if sys.argv [1] == "-correct":
-		referencePdbFilename = sys.argv [2]
-		targetPdbFilename    = sys.argv [3]
-		proportion = getProportionAAinCorrectSS (referencePdbFilename, targetPdbFilename, workingDir)
-	elif sys.argv [1] == "-any":
-		targetPdbFilename = sys.argv [2]
-		proportion = getProportionAAinAnySS (targetPdbFilename, workingDir)
+	try:
+		referencePdbFilename, targetPdbFilename = "None", "None"
+		if len (sys.argv) < 3:
+			print USAGE
+			sys.exit (0)
+		
+		proportion = -1
+		workingDir = os.getcwd ()
+		if sys.argv [1] == "-correct":
+			referencePdbFilename = sys.argv [2]
+			targetPdbFilename    = sys.argv [3]
+			proportion = getProportionAAinCorrectSS (referencePdbFilename, targetPdbFilename, workingDir)
+		elif sys.argv [1] == "-any":
+			targetPdbFilename = sys.argv [2]
+			proportion = getProportionAAinAnySS (targetPdbFilename, workingDir)
 
-	print proportion
+		print proportion
+	except ZeroDivisionError:
+		print 0
+	except: 
+		print ">>> Eval error in secondary_structures.py, parameters: ", referencePdbFilename, targetPdbFilename
+		print e
 

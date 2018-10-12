@@ -42,17 +42,21 @@ def defineMessagesOutput ():
 # MAIN
 ##################################################################
 if __name__ == "__main__":
-	defineMessagesOutput ()
+	try:
+		defineMessagesOutput ()
 
-	if len (sys.argv) < 2: 
-		print USAGE
-		sys.exit (0)
+		if len (sys.argv) < 2: 
+			print USAGE
+			sys.exit (0)
 
-	pdbReference = sys.argv[1]
-	pdbTarget = sys.argv[2]
+		pdbReference = sys.argv[1]
+		pdbTarget = sys.argv[2]
 
-	outputDir = os.getcwd ()
+		outputDir = os.getcwd ()
 
-	value = float ( runProgram (["secondary_structures", "-correct", pdbReference, pdbTarget], outputDir).strip())
-	print value
+		value = float ( runProgram (["secondary_structures", "-correct", pdbReference, pdbTarget], outputDir).strip())
+		print value
+	except Exception as e:
+		print ">>> Eval error in secondary_structures_correct.py, parameters: ", pdbReference, pdbTarget
+		print e
 

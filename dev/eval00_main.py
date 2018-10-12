@@ -57,6 +57,7 @@ def evalSinglePathway (fullPathwayName, outputDir, nCpus=1):
 
 	# Write to file
 	resultsFilename = "%s/%s.values" % (outputDir, extractName (fullPathwayName))
+	print ">>> Results in: " + resultsFilename
 	resultsFile = open (resultsFilename, "w")
 	resultsFile.write ("\t".join (headersOutputFile.split()) + "\n")
 
